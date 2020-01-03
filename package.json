@@ -1,0 +1,16 @@
+{
+  "name": "harryzq.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/harryzq/harryzq.github.io.git",
+  "author": "qiangzhang <qiang.zhang@garena.cn>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "build":"bash deploy.sh "
+  },
+  "devDependencies": {
+    "vuepress": "^1.2.0"
+  }
+}
