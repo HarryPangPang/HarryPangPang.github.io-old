@@ -6,7 +6,9 @@ install:
 script:
   - npm run docs:build
   -sh ./deploy.sh
-
+branches:
+  only:
+  - dev
 deploy:
   provider: pages
   skip-cleanup: true
