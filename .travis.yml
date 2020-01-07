@@ -1,21 +1,25 @@
 language: node_js
 node_js:
-  - lts/*
+- lts/*
 cache:
   directories:
-    - node_modules #缓存依赖
+  - node_modules
 install:
-  - npm ci
+- npm ci
 script:
-  - npm run docs:build
-  - cd docs/.vuepress/dist
-  - echo 'www.easyrentsh.xyz' > CNAME
-  - git config --global user.email "1562055324@qq.com"
-  - git config --global user.name "harryzq"
-  - git init
-  - git add .
-  - git commit -m 'deploy'
-  - git push -f "https://${GH_TOKEN}@github.com/harryzq/harryzq.github.io.git" master
+- npm run docs:build
+- cd docs/.vuepress/dist
+- echo 'www.easyrentsh.xyz' > CNAME
+- git config --global user.email "1562055324@qq.com"
+- git config --global user.name "harryzq"
+- git init
+- git add .
+- git commit -m 'deploy'
+- git push -f "https://${GH_TOKEN}@github.com/harryzq/harryzq.github.io.git" master
+after_script:
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - node ./node_modules/grunt-cli/bin/grunt release
 branches:
   only:
   - dev
@@ -23,7 +27,10 @@ deploy:
   provider: pages
   skip-cleanup: true
   local_dir: docs/.vuepress/dist
-  github_token: $GH_TOKEN # a token generated on github allowing travis to push code on you repository
+  github_token: "$GH_TOKEN"
   keep-history: true
   on:
     branch: dev
+env:
+  global:
+    secure: c0eNhMRq/mYL7l6gv/rGZaVwSWA5mHEBxLVYl18QrqIITuJguaExGVU1qQbndMPMwd/D5UJQE2JawoJvcTKlxclb18e66Kt3izoMQsXMQNwGobTziQG0miqKiJM01sA5puBnQ1Zol/LNTDuL3G+aPTGrXZ37rPldJYpni5mGEalDJwzlqpEvaZVo2EWiqCjtx/zN4UBkkNKY6BoANEe0Ep4LNaxlOSgtz8dCsODJJlrGrt/uksgarTFTamhQPdWTfjc+z1LlTTTeRfiAxgrddUCNLdHurePNM0k/jwpdLRUOlZMlLe0bQytmhHzCtCg6N9dGn99EIyT73nEkGiP40NevYrABwaDqboWE/+OJxy45ejOEt5YQH3yi3Grzd8YqjzuGTkkAu4wOg6AUm2LeMB+F2w0jqf3jK3adA6wJl7I7SNR127BOBKVwfV9TwQ9IOba7I3ufQZj3BR6YSzgyksolUbyWStoypT51H+8dhQqPkK/7Sv/I2zqsBRWHsJZZP4ZvvfOdtLYKrY0ToJCKRUfEJB9owKI+teXaF2KnkFcytOHpgOww6QYFbRbEZauRHi8ET5hVE6gof/SQkNxaaSTHaOfYW50p/OAyhwMZ4cQo5SsYNapwUfPrgtUNspIlAyCRs6Tamx/E52XhAbpMygGteRiL/qizMe9ErdFdv2s=
