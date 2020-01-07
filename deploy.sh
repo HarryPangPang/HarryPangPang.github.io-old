@@ -21,6 +21,8 @@ echo '
 node_modules 
 .VSCODE
 docs/.vuepress/dist' > .gitignore
+git config --global user.email "1562055324@qq.com"
+git config --global user.name "harryzq"
 git init
 git add -A
 git commit -m 'deploy'
@@ -29,6 +31,7 @@ git commit -m 'deploy'
 # 建立远程链接
 # git remote add origin/master https://github.com/harryzq/harryzq.github.io.git
 # 如果发布到 https://<USERNAME>.github.io
-git push -f https://github.com/harryzq/harryzq.github.io.git master
+# git push -f https://github.com/harryzq/harryzq.github.io.git master
+git push -f git@github.com:harryzq/harryzq.github.io.git master
 
 cd -
