@@ -10,7 +10,7 @@ module.exports = {
         sidebarDepth: 1, // 可选的, 默认值是 1
         children: [
           "/2020/docker部署jenkins",
-          "/2020/github博客自动化部署"
+          "/2020/gitpages自动部署"
         ]
       },
       {
