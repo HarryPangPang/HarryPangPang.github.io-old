@@ -5,15 +5,15 @@ install:
   - npm ci
 script:
   - npm run docs:build
-  -sh ./deploy.sh
-# branches:
-#   only:
-#   - dev
+  - sh ./deploy.sh
+branches:
+  only:
+  - dev
 deploy:
   provider: pages
   skip-cleanup: true
   local_dir: docs/.vuepress/dist
-  github-token:  10824d76924a74a222f2aaf90a32f51ee57eca11 # a token generated on github allowing travis to push code on you repository
+  github-token: 10824d76924a74a222f2aaf90a32f51ee57eca11 # a token generated on github allowing travis to push code on you repository
   keep-history: true
   on:
     branch: dev
