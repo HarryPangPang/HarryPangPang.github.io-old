@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Javascript常见的内存泄漏 | Harry&#39;s Blog</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.c7d45e2d.css" as="style"><link rel="preload" href="/assets/js/app.b998f59f.js" as="script"><link rel="preload" href="/assets/js/2.b4182e24.js" as="script"><link rel="preload" href="/assets/js/9.3beb6d47.js" as="script"><link rel="prefetch" href="/assets/js/10.ec7a14d1.js"><link rel="prefetch" href="/assets/js/11.68fd43cd.js"><link rel="prefetch" href="/assets/js/12.cb531b98.js"><link rel="prefetch" href="/assets/js/13.2117fb4d.js"><link rel="prefetch" href="/assets/js/14.95f820b4.js"><link rel="prefetch" href="/assets/js/15.ff37cb81.js"><link rel="prefetch" href="/assets/js/16.f94e9052.js"><link rel="prefetch" href="/assets/js/17.ead69c87.js"><link rel="prefetch" href="/assets/js/18.517dd641.js"><link rel="prefetch" href="/assets/js/19.17d14f38.js"><link rel="prefetch" href="/assets/js/20.5bfc367a.js"><link rel="prefetch" href="/assets/js/21.c1220b6f.js"><link rel="prefetch" href="/assets/js/22.d47ea806.js"><link rel="prefetch" href="/assets/js/23.68f3d4b0.js"><link rel="prefetch" href="/assets/js/24.e95df7f3.js"><link rel="prefetch" href="/assets/js/25.d985f29f.js"><link rel="prefetch" href="/assets/js/26.c08cf248.js"><link rel="prefetch" href="/assets/js/27.d84cca50.js"><link rel="prefetch" href="/assets/js/28.bb4c1ed9.js"><link rel="prefetch" href="/assets/js/29.2003a480.js"><link rel="prefetch" href="/assets/js/3.d6eaa26a.js"><link rel="prefetch" href="/assets/js/30.0e921be7.js"><link rel="prefetch" href="/assets/js/31.bb5d9ed1.js"><link rel="prefetch" href="/assets/js/32.867850a9.js"><link rel="prefetch" href="/assets/js/33.0cf47229.js"><link rel="prefetch" href="/assets/js/34.554d5707.js"><link rel="prefetch" href="/assets/js/35.440ad71c.js"><link rel="prefetch" href="/assets/js/36.4a230733.js"><link rel="prefetch" href="/assets/js/37.8a4e5515.js"><link rel="prefetch" href="/assets/js/38.7454e44f.js"><link rel="prefetch" href="/assets/js/39.fb49aa6b.js"><link rel="prefetch" href="/assets/js/4.2d108d05.js"><link rel="prefetch" href="/assets/js/40.fa8766df.js"><link rel="prefetch" href="/assets/js/41.529766bb.js"><link rel="prefetch" href="/assets/js/42.a0f2cebd.js"><link rel="prefetch" href="/assets/js/5.c199e918.js"><link rel="prefetch" href="/assets/js/6.85c03d0d.js"><link rel="prefetch" href="/assets/js/7.62c90daa.js"><link rel="prefetch" href="/assets/js/8.d4044af7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c7d45e2d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Harry's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2020年博客</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>过去的博客</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/2019/10个前端面试必会题.html" class="sidebar-link">10个前端面试必会题目！（适用于中高级）</a></li><li><a href="/2019/201901面试题分享.html" class="sidebar-link">201901面试题分享</a></li><li><a href="/2019/常用的一些git命令行.html" class="sidebar-link">常用的一些git命令行</a></li><li><a href="/2019/发布流程.html" class="sidebar-link">发布流程</a></li><li><a href="/2019/函数节流与防抖.html" class="sidebar-link">函数节流与防抖</a></li><li><a href="/2019/函数柯里化.html" class="sidebar-link">函数柯里化（curry)</a></li><li><a href="/2019/函数声明VS函数表达式.html" class="sidebar-link">函数声明？函数表达式？我该怎么选？！</a></li><li><a href="/2019/看懂js中this关键字的指向问题.html" class="sidebar-link">看懂js中this关键字的指向问题</a></li><li><a href="/2019/浏览器缓存的了解.html" class="sidebar-link">浏览器缓存的了解</a></li><li><a href="/2019/前端进阶学习路径.html" class="sidebar-link">前端进阶学习路径</a></li><li><a href="/2019/前端知识点190111.html" class="sidebar-link">前端知识点1901</a></li><li><a href="/2019/强制缓存（200）和协商缓存（304）.html" class="sidebar-link">强制缓存（200）和协商缓存（304）</a></li><li><a href="/2019/如何理解es6中的class以及class中的constructor函数.html" class="sidebar-link">如何理解es6中的class以及class中的constructor函数</a></li><li><a href="/2019/如何让小孩学习javascript.html" class="sidebar-link">如何让小孩学习javascript</a></li><li><a href="/2019/十分钟了解ajax.html" class="sidebar-link">十分钟了解ajax</a></li><li><a href="/2019/是时候谈谈JavaScript面向对象了.html" class="sidebar-link">是时候谈谈JavaScript面向对象了</a></li><li><a href="/2019/手把手教你实现脚手架工具Koa-generator.html" class="sidebar-link">手把手教你实现脚手架工具Koa-generator</a></li><li><a href="/2019/HTTP请求的四种方式区别.html" class="sidebar-link">HTTP请求的四种方式区别</a></li><li><a href="/2019/javascript-闭包.html" class="sidebar-link">javascript-闭包</a></li><li><a href="/2019/Javascript常见的内存泄漏.html" class="active sidebar-link">Javascript常见的内存泄漏</a></li><li><a href="/2019/javascript跨域.html" class="sidebar-link">javascript跨域</a></li><li><a href="/2019/JavaScript执行环境-执行栈.html" class="sidebar-link">JavaScript执行环境-执行栈</a></li><li><a href="/2019/MySQL8-0-12-secure-file-priv数据导出问题解决.html" class="sidebar-link">MySQL8.0.12--secure-file-priv数据导出问题解决</a></li><li><a href="/2019/React_V16入门手册.html" class="sidebar-link">React_V16入门手册</a></li><li><a href="/2019/react16配置.html" class="sidebar-link">/2019/react16配置.html</a></li><li><a href="/2019/react生命周期.html" class="sidebar-link">react生命周期</a></li><li><a href="/2019/React虚拟dom和diff算法.html" class="sidebar-link">React虚拟dom和diff算法</a></li><li><a href="/2019/React学习笔记.html" class="sidebar-link">React学习笔记</a></li><li><a href="/2019/Vue使用踩坑记录.html" class="sidebar-link">Vue使用踩坑记录</a></li><li><a href="/2019/vue中AsyncAwait的使用示例.html" class="sidebar-link">vue中AsyncAwait的使用示例</a></li><li><a href="/2019/webpack下build报错.html" class="sidebar-link">webpack下build报错</a></li><li><a href="/2019/zabbix平台搭建.html" class="sidebar-link">zabbix平台搭建</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>什么是内存泄露？
+程序的运行需要内存。只要程序提出要求，操作系统或者运行时（runtime）就必须供给内存。
+对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。
+白话解释就是你写的代码里有些东西不用了，就别在保存再内存中了，不然好比你开了100个迅雷CPU卡不卡？卡，但你其实真正用到的只是其中一个迅雷。这就是内存泄漏</p></blockquote> <p>想要理解JavaScript的内存泄漏，就要先了解一下js的自动垃圾收集机制</p> <h4 id="js的自动垃圾收集机制"><a href="#js的自动垃圾收集机制" class="header-anchor">#</a> js的自动垃圾收集机制</h4> <p>在编写JS时，我们不用像C++一样要手工跟踪内存的使用情况，JS的内存分配和无用内存的回收完全实现了自动化。</p> <p>JS常用的垃圾收集机制有两种：1. 标记清除 2. 引用计数</p> <ol><li>标记清除
+在函数声明一个变量的时候，就将这个变量标记为“进入环境”。从逻辑上讲，永远都不能释放进入环境的变量作占用的内存，因为只要执行流进入相应的环境，就可能会用到它们。而当变量离开环境时，则将其标记为“离开环境”。垃圾回收器在运行时候会给存储在内存中中的所有变量都加上标记。然后它会去掉环境中的变量以及被环境中的变量引用的变量的标记（闭包）。在此之后再被标记的变量将被视为准备删除的变量，原因是环境中的变量已经无法访问到这些变量了。最后，垃圾回收器完成内存清楚工作，销毁那些带标记的值并回收他们所占用的内存空间</li></ol> <div class="language- extra-class"><pre class="language-text"><code> 
+function test(){ 
+ var a = 10 ; //被标记 ，进入环境 
+ var b = 20 ; //被标记 ，进入环境 
+} 
+test(); //执行完毕 之后 a、b又被标离开环境，被回收。
+
+
+ 
+</code></pre></div><ol start="2"><li>引用计数（现代浏览器不再使用）
+  引用计数的含义是跟踪记录每个值被引用的次数。当声明了一个变量并将一个引用类型值赋给该变量时，则这个值的引用次数就是1。如果同一个值又被赋给另一个变量，则该值的引用次数加1。相反，如果包含对这个值引用的变量又取得了另外一个值，则这个值的引用次数减1。当这个值的引用次数变成0时，则说明没有办法再访问这个值了，因而就可以将其占用的内存空间回收回来。这样，当垃圾回收器下次再运行时，它就会释放那些引用次数为0的值所占用的内存。</li></ol> <p>但是很重要的一点是当遇到循环引用的时候，函数的引用次数就不会为0，所以不会被垃圾回收器回收内存，会造成内存泄露。在IE中涉及DOM对象，就会存在循环引用的问题。</p> <div class="language- extra-class"><pre class="language-text"><code>
+ 
+function test(){ 
+ var a = {} ; //a的引用次数为0 
+ 
+ var b = a ; //a的引用次数加1，为1 
+ 
+ var c =a; //a的引用次数再加1，为2 
+ 
+ var b ={}; //b解除对a的引用，a的引用次数减1，为1 
+}
+
+// 循环引用
+function cycle() {
+    var o1 = {};
+    var o2 = {};
+    o1.a = o2;
+    o2.a = o1; 
+
+    return &quot;cycle reference!&quot;
+}
+cycle();
+
+//数组
+let arr = [1,2,3]
+
+虽然这里没有引用arr，arr对他的值发生了引用，所以会一直存在内存中，可以采用 arr=null来解除引用
+</code></pre></div><p>虽然有了自动垃圾收集机制，我们可以不必太过关注一些内存泄漏的问题，但有些情况下还是会发生这种问题</p> <h4 id="js的常见内存泄漏"><a href="#js的常见内存泄漏" class="header-anchor">#</a> js的常见内存泄漏</h4> <ol><li>全局变量引起的内存泄漏</li></ol> <div class="language- extra-class"><pre class="language-text"><code>function leaks(){  
+    leak = 'xxxxxx';//leak 成为一个全局变量，不会被回收
+}
+</code></pre></div><ol start="2"><li>闭包引起的内存泄漏</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var leaks = (function(){  
+    var leak = 'xxxxxx';// 被闭包所引用，不会被回收
+    return function(){
+        console.log(leak);
+    }
+})()
+</code></pre></div><ol start="3"><li>dom清空或删除时，事件未清除导致的内存泄漏</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;div id=&quot;container&quot;&gt;  
+&lt;/div&gt;
+
+$('#container').bind('click', function(){
+    console.log('click');
+}).remove();
+
+// zepto 和原生 js下，#container dom 元素，还在内存里jquery 的 empty和 remove会帮助开发者避免这个问题
+
+&lt;div id=&quot;container&quot;&gt;  
+&lt;/div&gt;
+
+$('#container').bind('click', function(){
+    console.log('click');
+}).off('click').remove();
+//把事件清除了，即可从内存中移除
+</code></pre></div><ol start="4"><li>计时器或回调函数
+定时器setInterval</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var a = fun();
+setInterval(function(){
+  var node = document.getElementById('node');
+  if(node){
+     node.innerHTML = 'test';
+  }
+}，1000);
+</code></pre></div><p>节点node或数据不需要时，定时器setInterval依然指向这些数据，所以即使node节点被溢出，interval仍旧存活并且垃圾回收期没法回收。</p> <p>解决是终止定时器。</p> <p>这种循环定时器，是一定要设置关闭条件，然后将其clear并且将timer指向null]</p> <h4 id="解决方法及性能优化"><a href="#解决方法及性能优化" class="header-anchor">#</a> 解决方法及性能优化</h4> <p>发生内存泄漏肯定是不愿看到的，我们可以采取：
+一旦确定数据不再使用，可以手动将其值设置为null来释放其引用。 —— 解除引用。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/2019/javascript-闭包.html" class="prev">javascript-闭包</a></span> <span class="next"><a href="/2019/javascript跨域.html">javascript跨域</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b998f59f.js" defer></script><script src="/assets/js/2.b4182e24.js" defer></script><script src="/assets/js/9.3beb6d47.js" defer></script>
+  </body>
+</html>

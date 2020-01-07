@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Javascript设计模式学习1（热身篇） | Harry&#39;s Blog</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.c7d45e2d.css" as="style"><link rel="preload" href="/assets/js/app.b998f59f.js" as="script"><link rel="preload" href="/assets/js/2.b4182e24.js" as="script"><link rel="preload" href="/assets/js/39.fb49aa6b.js" as="script"><link rel="prefetch" href="/assets/js/10.ec7a14d1.js"><link rel="prefetch" href="/assets/js/11.68fd43cd.js"><link rel="prefetch" href="/assets/js/12.cb531b98.js"><link rel="prefetch" href="/assets/js/13.2117fb4d.js"><link rel="prefetch" href="/assets/js/14.95f820b4.js"><link rel="prefetch" href="/assets/js/15.ff37cb81.js"><link rel="prefetch" href="/assets/js/16.f94e9052.js"><link rel="prefetch" href="/assets/js/17.ead69c87.js"><link rel="prefetch" href="/assets/js/18.517dd641.js"><link rel="prefetch" href="/assets/js/19.17d14f38.js"><link rel="prefetch" href="/assets/js/20.5bfc367a.js"><link rel="prefetch" href="/assets/js/21.c1220b6f.js"><link rel="prefetch" href="/assets/js/22.d47ea806.js"><link rel="prefetch" href="/assets/js/23.68f3d4b0.js"><link rel="prefetch" href="/assets/js/24.e95df7f3.js"><link rel="prefetch" href="/assets/js/25.d985f29f.js"><link rel="prefetch" href="/assets/js/26.c08cf248.js"><link rel="prefetch" href="/assets/js/27.d84cca50.js"><link rel="prefetch" href="/assets/js/28.bb4c1ed9.js"><link rel="prefetch" href="/assets/js/29.2003a480.js"><link rel="prefetch" href="/assets/js/3.d6eaa26a.js"><link rel="prefetch" href="/assets/js/30.0e921be7.js"><link rel="prefetch" href="/assets/js/31.bb5d9ed1.js"><link rel="prefetch" href="/assets/js/32.867850a9.js"><link rel="prefetch" href="/assets/js/33.0cf47229.js"><link rel="prefetch" href="/assets/js/34.554d5707.js"><link rel="prefetch" href="/assets/js/35.440ad71c.js"><link rel="prefetch" href="/assets/js/36.4a230733.js"><link rel="prefetch" href="/assets/js/37.8a4e5515.js"><link rel="prefetch" href="/assets/js/38.7454e44f.js"><link rel="prefetch" href="/assets/js/4.2d108d05.js"><link rel="prefetch" href="/assets/js/40.fa8766df.js"><link rel="prefetch" href="/assets/js/41.529766bb.js"><link rel="prefetch" href="/assets/js/42.a0f2cebd.js"><link rel="prefetch" href="/assets/js/5.c199e918.js"><link rel="prefetch" href="/assets/js/6.85c03d0d.js"><link rel="prefetch" href="/assets/js/7.62c90daa.js"><link rel="prefetch" href="/assets/js/8.d4044af7.js"><link rel="prefetch" href="/assets/js/9.3beb6d47.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c7d45e2d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Harry's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2020年博客</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>javascript设计模式</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js设计模式/Javascript设计模式学习1.html" class="active sidebar-link">Javascript设计模式学习1（热身篇）</a></li><li><a href="/js设计模式/Javascript设计模式学习2.html" class="sidebar-link">Javascript设计模式学习2（热身篇）</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>过去的博客</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h4 id="从创建一个函数开始"><a href="#从创建一个函数开始" class="header-anchor">#</a> 从创建一个函数开始</h4> <p>函数的创建有很多形式，通常我们会采用以下做法</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//get name here</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token comment">//get age here</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> <span class="token function-variable function">getName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//get name here</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> <span class="token function-variable function">getAge</span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token comment">//get age here</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>但是这种做法有个弊端，这类函数因为都是全局变量，所以在团队合作，或者项目函数很多时就会出现函数命名重复的问题，那就糟糕了，会出现函数被覆盖，导致不必要的工作量。所以可以采用下面的方式（用对象来收编方法，变量）</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> GetUserInfo<span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">getName</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//get name here</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">getAge</span> <span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//get age here</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//或者像下面这样</span>
+<span class="token keyword">var</span> <span class="token function-variable function">GetUserInfo</span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+GetUserInfo<span class="token punctuation">.</span><span class="token function-variable function">getName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token comment">//get name here</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+GetUserInfo<span class="token punctuation">.</span><span class="token function-variable function">getAge</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token comment">//get age here</span>
+ <span class="token punctuation">}</span>
+
+</code></pre></div><p>但是上面方法，还有个问题，就是这个对象不能复制，比如我只想使用里面的getUserInfo.getAge()这个方法，但是没有办法复制一个这样的对象来给自己使用，除非代码全部拷贝一遍，这无疑徒增了代码量，所以我们可以采用return来返回一个新的函数对象，如下</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> <span class="token function-variable function">GetUserInfo</span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">return</span> <span class="token punctuation">{</span>
+     <span class="token function-variable function">getName</span> <span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token comment">//get name here</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token function-variable function">getAge</span> <span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token comment">//get age here</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这样我们就可以安心复制getUserInfo其中的某个方法来为自己所用了,使用方法如下</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> getUserInfo_myself <span class="token operator">=</span> <span class="token function">GetUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+getUserInfo_myself<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>上面的方法虽然可以完美达到我们的要求，但是编程最重要的是什么？当然时面向对象！我们来回顾一下面向对象的三个基本特征：封装、继承、多态。</p> <p>封装：类其实就是保存了一个函数的变量，这个函数有自己的属性和方法。将属性和方法组成一个类的过程就是封装。</p> <p>所以要实现封装，我们就得用JS实现一个类</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//ES5</span>
+<span class="token keyword">var</span> <span class="token function-variable function">GetUserInfo</span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">getName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token comment">//get name here</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">getAge</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token comment">//get age here</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//this的指向简单理解就是函数被调用时的执行环境，也可以说时谁调用该函数，this就指向谁</span>
+<span class="token comment">//这里this就指向getUserInfo_myself</span>
+
+</code></pre></div><p>上面的代码（构造函数）就实现了一个类（函数，有自己的属性，有自己的方法）</p> <p>调用时，我们就不能var getUserInfo_myself = GetUserInfo()这样来用了。要像下面这样</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> getUserInfo_myself <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GetUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">getUserInfo_myself</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>以为这样就结束？这还不算是最好的方案，因为通过new来创建新对象的时候，新创建的对象都会复制一次this的属性，用多了就会造成很多消耗，我们可以避免吗？可以！通过原型的方式来实现，看下面</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//ES5方法一</span>
+<span class="token keyword">var</span> <span class="token function-variable function">GetUserInfo</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">GetUserInfo</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>getName<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token comment">//get name here</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">GetUserInfo</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>getAge<span class="token operator">=</span><span class="token punctuation">{</span>
+  <span class="token comment">//get age here</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//ES5方法二</span>
+<span class="token keyword">var</span> <span class="token function-variable function">GetUserInfo</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">GetUserInfo</span><span class="token punctuation">.</span>prototype<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+     <span class="token comment">//get name here</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+     <span class="token comment">//get agehere</span>
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//用ES6的语法</span>
+<span class="token keyword">class</span> <span class="token class-name">GetUserInfo</span><span class="token punctuation">{</span>
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+ <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token comment">//get name here</span>
+ <span class="token punctuation">}</span>
+ <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token comment">//get age here</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>使用方法如下</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> getUserInfo_myself <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GetUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// class方法必须使用new，否则会报错</span>
+getUserInfo_myself<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+getUserInfo_myself<span class="token punctuation">.</span><span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>之前的例子中我们想要执行getName和getAge方法都要将对象getUserInfo_myself写两次，那我们就可以用链式调用来优化一下，那我们应该怎么做？看下面</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//创建对象的方式实现</span>
+<span class="token keyword">var</span> GetUserInfo<span class="token operator">=</span> <span class="token punctuation">{</span>
+ <span class="token function-variable function">getName</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'getName'</span><span class="token punctuation">)</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+ <span class="token keyword">return</span> <span class="token keyword">this</span>
+ <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token function-variable function">getAge</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'getAge'</span><span class="token punctuation">)</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+ <span class="token keyword">return</span> <span class="token keyword">this</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+GetUserInfo<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">//这里的this指向GetUserInfo，所以GetUserInfo.getName().getAge()其实就是这样执行的</span>
+<span class="token comment">//1. GetUserInfo.getName() 返回this,this指向GetUserInfo，GetUserInfo有两个方法getName()和getAge()</span>
+<span class="token comment">//2. this.getAge() 也就是 GetUserInfo.getAge()</span>
+
+<span class="token comment">//原型的方式实现</span>
+<span class="token keyword">var</span> <span class="token function-variable function">GetUserInfo</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token class-name">GetUserInfo</span><span class="token punctuation">.</span>prototype<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token comment">//get name here</span>
+         <span class="token keyword">return</span> <span class="token keyword">this</span>
+     <span class="token punctuation">}</span>
+ <span class="token function">    getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token comment">//get agehere</span>
+         <span class="token keyword">return</span> <span class="token keyword">this</span>
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>我是Harry,Destiny is all</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/2020/docker部署jenkins.html" class="prev">docker部署jenkins</a></span> <span class="next"><a href="/js设计模式/Javascript设计模式学习2.html">Javascript设计模式学习2（热身篇）</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b998f59f.js" defer></script><script src="/assets/js/2.b4182e24.js" defer></script><script src="/assets/js/39.fb49aa6b.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>手把手教你实现脚手架工具Koa-generator | Harry&#39;s Blog</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.c7d45e2d.css" as="style"><link rel="preload" href="/assets/js/app.b998f59f.js" as="script"><link rel="preload" href="/assets/js/2.b4182e24.js" as="script"><link rel="preload" href="/assets/js/33.0cf47229.js" as="script"><link rel="prefetch" href="/assets/js/10.ec7a14d1.js"><link rel="prefetch" href="/assets/js/11.68fd43cd.js"><link rel="prefetch" href="/assets/js/12.cb531b98.js"><link rel="prefetch" href="/assets/js/13.2117fb4d.js"><link rel="prefetch" href="/assets/js/14.95f820b4.js"><link rel="prefetch" href="/assets/js/15.ff37cb81.js"><link rel="prefetch" href="/assets/js/16.f94e9052.js"><link rel="prefetch" href="/assets/js/17.ead69c87.js"><link rel="prefetch" href="/assets/js/18.517dd641.js"><link rel="prefetch" href="/assets/js/19.17d14f38.js"><link rel="prefetch" href="/assets/js/20.5bfc367a.js"><link rel="prefetch" href="/assets/js/21.c1220b6f.js"><link rel="prefetch" href="/assets/js/22.d47ea806.js"><link rel="prefetch" href="/assets/js/23.68f3d4b0.js"><link rel="prefetch" href="/assets/js/24.e95df7f3.js"><link rel="prefetch" href="/assets/js/25.d985f29f.js"><link rel="prefetch" href="/assets/js/26.c08cf248.js"><link rel="prefetch" href="/assets/js/27.d84cca50.js"><link rel="prefetch" href="/assets/js/28.bb4c1ed9.js"><link rel="prefetch" href="/assets/js/29.2003a480.js"><link rel="prefetch" href="/assets/js/3.d6eaa26a.js"><link rel="prefetch" href="/assets/js/30.0e921be7.js"><link rel="prefetch" href="/assets/js/31.bb5d9ed1.js"><link rel="prefetch" href="/assets/js/32.867850a9.js"><link rel="prefetch" href="/assets/js/34.554d5707.js"><link rel="prefetch" href="/assets/js/35.440ad71c.js"><link rel="prefetch" href="/assets/js/36.4a230733.js"><link rel="prefetch" href="/assets/js/37.8a4e5515.js"><link rel="prefetch" href="/assets/js/38.7454e44f.js"><link rel="prefetch" href="/assets/js/39.fb49aa6b.js"><link rel="prefetch" href="/assets/js/4.2d108d05.js"><link rel="prefetch" href="/assets/js/40.fa8766df.js"><link rel="prefetch" href="/assets/js/41.529766bb.js"><link rel="prefetch" href="/assets/js/42.a0f2cebd.js"><link rel="prefetch" href="/assets/js/5.c199e918.js"><link rel="prefetch" href="/assets/js/6.85c03d0d.js"><link rel="prefetch" href="/assets/js/7.62c90daa.js"><link rel="prefetch" href="/assets/js/8.d4044af7.js"><link rel="prefetch" href="/assets/js/9.3beb6d47.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c7d45e2d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Harry's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2020年博客</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>过去的博客</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/2019/10个前端面试必会题.html" class="sidebar-link">10个前端面试必会题目！（适用于中高级）</a></li><li><a href="/2019/201901面试题分享.html" class="sidebar-link">201901面试题分享</a></li><li><a href="/2019/常用的一些git命令行.html" class="sidebar-link">常用的一些git命令行</a></li><li><a href="/2019/发布流程.html" class="sidebar-link">发布流程</a></li><li><a href="/2019/函数节流与防抖.html" class="sidebar-link">函数节流与防抖</a></li><li><a href="/2019/函数柯里化.html" class="sidebar-link">函数柯里化（curry)</a></li><li><a href="/2019/函数声明VS函数表达式.html" class="sidebar-link">函数声明？函数表达式？我该怎么选？！</a></li><li><a href="/2019/看懂js中this关键字的指向问题.html" class="sidebar-link">看懂js中this关键字的指向问题</a></li><li><a href="/2019/浏览器缓存的了解.html" class="sidebar-link">浏览器缓存的了解</a></li><li><a href="/2019/前端进阶学习路径.html" class="sidebar-link">前端进阶学习路径</a></li><li><a href="/2019/前端知识点190111.html" class="sidebar-link">前端知识点1901</a></li><li><a href="/2019/强制缓存（200）和协商缓存（304）.html" class="sidebar-link">强制缓存（200）和协商缓存（304）</a></li><li><a href="/2019/如何理解es6中的class以及class中的constructor函数.html" class="sidebar-link">如何理解es6中的class以及class中的constructor函数</a></li><li><a href="/2019/如何让小孩学习javascript.html" class="sidebar-link">如何让小孩学习javascript</a></li><li><a href="/2019/十分钟了解ajax.html" class="sidebar-link">十分钟了解ajax</a></li><li><a href="/2019/是时候谈谈JavaScript面向对象了.html" class="sidebar-link">是时候谈谈JavaScript面向对象了</a></li><li><a href="/2019/手把手教你实现脚手架工具Koa-generator.html" class="active sidebar-link">手把手教你实现脚手架工具Koa-generator</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/2019/HTTP请求的四种方式区别.html" class="sidebar-link">HTTP请求的四种方式区别</a></li><li><a href="/2019/javascript-闭包.html" class="sidebar-link">javascript-闭包</a></li><li><a href="/2019/Javascript常见的内存泄漏.html" class="sidebar-link">Javascript常见的内存泄漏</a></li><li><a href="/2019/javascript跨域.html" class="sidebar-link">javascript跨域</a></li><li><a href="/2019/JavaScript执行环境-执行栈.html" class="sidebar-link">JavaScript执行环境-执行栈</a></li><li><a href="/2019/MySQL8-0-12-secure-file-priv数据导出问题解决.html" class="sidebar-link">MySQL8.0.12--secure-file-priv数据导出问题解决</a></li><li><a href="/2019/React_V16入门手册.html" class="sidebar-link">React_V16入门手册</a></li><li><a href="/2019/react16配置.html" class="sidebar-link">/2019/react16配置.html</a></li><li><a href="/2019/react生命周期.html" class="sidebar-link">react生命周期</a></li><li><a href="/2019/React虚拟dom和diff算法.html" class="sidebar-link">React虚拟dom和diff算法</a></li><li><a href="/2019/React学习笔记.html" class="sidebar-link">React学习笔记</a></li><li><a href="/2019/Vue使用踩坑记录.html" class="sidebar-link">Vue使用踩坑记录</a></li><li><a href="/2019/vue中AsyncAwait的使用示例.html" class="sidebar-link">vue中AsyncAwait的使用示例</a></li><li><a href="/2019/webpack下build报错.html" class="sidebar-link">webpack下build报错</a></li><li><a href="/2019/zabbix平台搭建.html" class="sidebar-link">zabbix平台搭建</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>我们日常中经常使用各种cli来加速我们的工作，你们也一定和我一样想知道这些cli内部都干了什么？接下来我们就以实现一个koa-generator来打开脚手架工具的大门，来跟着我一步一步做吧：</p> <p><code>为了加快我们的学习进度，更快的理解cli，我们这里会省略一些内容，旨在帮助大家更快建立基本的概念和入门方法</code></p> <h3 id="需求分析"><a href="#需求分析" class="header-anchor">#</a> 需求分析</h3> <p>首先我们先对我们要实现的工具做一个简单的需求分析：</p> <ol><li>自动化生成koa初始项目结构</li> <li>可以自定义一些内容</li> <li>发布</li></ol> <p>是不是很简单？没错，真的很简单！</p> <h3 id="逐步实现"><a href="#逐步实现" class="header-anchor">#</a> 逐步实现</h3> <h4 id="_1"><a href="#_1" class="header-anchor">#</a> 1</h4> <p>想要自动化生成koa初始项目结构的前提，就是要知道我们构建出来的结构是什么样的：</p> <p><img src="https://user-gold-cdn.xitu.io/2019/5/9/16a9b4ab026e0644?w=299&amp;h=371&amp;f=png&amp;s=17255" alt=""></p> <p>上图就是我们想要生成的项目结构</p> <p>明确了我们的目的接下来就开始着手吧！</p> <h4 id="_2"><a href="#_2" class="header-anchor">#</a> 2</h4> <h4 id="_2-1"><a href="#_2-1" class="header-anchor">#</a> 2.1</h4> <p>创建文件夹</p> <div class="language- extra-class"><pre class="language-text"><code>mkdir koa-simple-generator
+</code></pre></div><h4 id="_2-2"><a href="#_2-2" class="header-anchor">#</a> 2.2</h4> <p>进入项目目录</p> <div class="language- extra-class"><pre class="language-text"><code>cd koa-simple-generator
+</code></pre></div><h4 id="_2-3"><a href="#_2-3" class="header-anchor">#</a> 2.3</h4> <p>初始化npm（等不及实践就一路enter，后面也可以再做修改）</p> <div class="language- extra-class"><pre class="language-text"><code>npm init
+</code></pre></div><h4 id="_2-4"><a href="#_2-4" class="header-anchor">#</a> 2.4</h4> <p>打开我们的package.json，如下</p> <p><img src="https://user-gold-cdn.xitu.io/2019/5/9/16a9b511c3717d41?w=498&amp;h=235&amp;f=png&amp;s=14605" alt=""></p> <p>将下面的代码复制到package.json里</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;name&quot;: &quot;koa-simple-generator&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+
+
+  &quot;main&quot;: &quot;bin/wowKoa&quot;,
+  &quot;bin&quot;: {
+    &quot;koa2&quot;: &quot;./bin/wowKoa&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;commander&quot;: &quot;2.7.1&quot;,
+    &quot;mkdirp&quot;: &quot;0.5.1&quot;,
+    &quot;sorted-object&quot;: &quot;1.0.0&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;mocha&quot;: &quot;2.2.5&quot;,
+    &quot;rimraf&quot;: &quot;~2.2.8&quot;,
+    &quot;supertest&quot;: &quot;1.0.1&quot;
+  },
+  &quot;engines&quot;: {
+    &quot;node&quot;: &quot;&gt;= 7.0&quot;
+  }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>1. dependencies和devDependencies简单来说就是应用的依赖包，devDependencies只会在开发环境安装
+
+2. 这句话的意思是我们的这个工具需要node7.0及以上的版本才能支持
+&quot;engines&quot;: {
+    &quot;node&quot;: &quot;&gt;= 7.0&quot;
+  }
+
+重点是这两句
+&quot;main&quot;: &quot;bin/wowKoa&quot;,
+  &quot;bin&quot;: {
+    &quot;wowKoa&quot;: &quot;./bin/wowKoa&quot;
+  },
+  意思是默认执行的是bin目录下的wowKoa，
+  执行wowKoa的命令，执行的也是bin目录下的wowKoa，
+  
+</code></pre></div><p>####2.5
+接下来安装我们的依赖吧</p> <div class="language- extra-class"><pre class="language-text"><code>npm i
+</code></pre></div><h4 id="_2-6"><a href="#_2-6" class="header-anchor">#</a> 2.6</h4> <p>安装完，我们新建一个目录template</p> <div class="language- extra-class"><pre class="language-text"><code>mkdir template
+</code></pre></div><p>然后我们可以把我们想要生成的目录结构拷贝进去，这里我就只是把koa2的目录拷贝进去，现在我们的目录长这样：</p> <p><img src="https://user-gold-cdn.xitu.io/2019/5/9/16a9b5f29ca24773?w=256&amp;h=240&amp;f=png&amp;s=10184" alt=""></p> <h4 id="_2-7"><a href="#_2-7" class="header-anchor">#</a> 2.7</h4> <p>新建bin目录，在bin下新建文件wowKoa</p> <p><img src="https://user-gold-cdn.xitu.io/2019/5/9/16a9b632f0c8d54e?w=314&amp;h=166&amp;f=png&amp;s=7354" alt=""></p> <h4 id="_2-8"><a href="#_2-8" class="header-anchor">#</a> 2.8</h4> <p>接下来就是关键了，我们的所有工作都是在bin下的wowKoa文件里完成的
+直接复制粘贴下面的，然后进入项目目录运行<code>node bin/wowKoa</code>就能看到结果了</p> <p><em>代码我已经大部分都注释啦</em></p> <div class="language- extra-class"><pre class="language-text"><code>#!/usr/bin/env node
+ // 告诉Unix和Linux系统这个文件中的代码用node可执行程序去运行
+var program = require('commander');
+var mkdirp = require('mkdirp');
+var os = require('os');
+var fs = require('fs');
+var fsm = require('fs-extra')
+var path = require('path');
+var readline = require('readline');
+var pkg = require('../package.json');
+
+// 退出node进程
+var _exit = process.exit;
+// s.EOL属性是一个常量，返回当前操作系统的换行符（Windows系统是\r\n，其他系统是\n）
+var eol = os.EOL;
+
+
+
+var version = pkg.version;
+// Re-assign process.exit because of commander
+// TODO: Switch to a different command framework
+process.exit = exit
+
+program
+
+    /**
+     * .version('0.0.1', '-v, --version')
+     * 1版本号&lt;必须&gt;,
+     * 2自定义标志&lt;可省略&gt;：默认为 -V 和 --version
+     * 
+     * .option('-n, --name&lt;path&gt;', 'name description', 'default name')
+     * 1 自定义标志&lt;必须&gt;：分为长短标识，中间用逗号、竖线或者空格分割；标志后面可跟必须参数或可选参数，前者用 &lt;&gt; 包含，后者用 [] 包含
+     * 2 选项描述&lt;省略不报错&gt;：在使用 --help 命令时显示标志描述
+     * 3 默认值&lt;可省略&gt;
+     * 
+     * .usage('[options] [dir]')
+     * 作用：只是打印用法说明
+     * 
+     * .parse(process.argv)
+     * 作用：用于解析process.argv，设置options以及触发commands
+     * process.argv获取命令行参数
+     * 
+     * 
+     * Commander提供了api来取消未定义的option自动报错机制， .allowUnknownOption()
+     */
+    .version(version, '-v, --version')
+    .allowUnknownOption()
+    .usage('[options] [dir]')
+    .option('-f, --force', 'force on non-empty directory')
+    .parse(process.argv);
+
+// 没有退出时执行主函数
+if (!exit.exited) {
+    main();
+}
+
+/**
+ * 主函数
+ */
+function main() {
+    // 获取当前命令执行路径
+    var destinationPath = program.args.shift() || '.';
+    // 根据文件夹名称定义appname
+    // 用于package.json里的name
+    var appName = path.basename(path.resolve(destinationPath));
+
+    // 判断当前文件目录是否为空
+    emptyDirectory(destinationPath, function (empty) {
+        // 如果为空或者强制执行时，就直接生成项目
+        if (empty || program.force) {
+            createApplication(appName, destinationPath);
+        } else {
+            // 否则询问
+            confirm('当前文件夹不为空，是否继续？[y/N] ', function (ok) {
+                if (ok) {
+                        // 控制台不再输入时销毁
+                        process.stdin.destroy();
+                        createApplication(appName, destinationPath);
+                } else {
+                    console.error('aborting');
+                    exit(1);
+                }
+            });
+        }
+    })
+}
+
+/**
+ * Check if the given directory `path` is empty.
+ * 判断文件夹是否为空
+ * @param {String} path
+ * @param {Function} fn
+ */
+
+function emptyDirectory(path, fn) {
+    fs.readdir(path, function (err, files) {
+        if (err &amp;&amp; 'ENOENT' != err.code) throw err;
+        fn(!files || !files.length);
+    });
+}
+
+/**
+ * 在给定路径中创建应用
+ * @param {String} path
+ */
+
+function createApplication(app_name, path) {
+    // wait的值等于complete函数执行的次数
+    // 用于选择在哪一次complete函数执行后执行控制台打印引导使用的文案
+    var wait = 1;
+    console.log();
+
+    function complete() {
+        if (--wait) return;
+        var prompt = launchedFromCmd() ? '&gt;' : '$';
+
+        console.log();
+        console.log('   install dependencies:');
+        console.log('     %s cd %s &amp;&amp; npm install', prompt, path);
+        console.log();
+        console.log('   run the app:');
+
+        // 根据控制台的环境不同打印不同文案（linux或者win）
+        if (launchedFromCmd()) {
+            console.log('     %s SET DEBUG=koa* &amp; npm start', prompt, app_name);
+        } else {
+            console.log('     %s DEBUG=%s:* npm start', prompt, app_name);
+        }
+
+    }
+    copytmp(complete, path,app_name)
+
+}
+
+// 拷贝模拟里的文件到本地
+function copytmp(fn, destinationPath,app_name) {
+    // 获取模板文件的文件目录
+    tmpPath = path.join(__dirname, '..', 'template')
+    // 创建目录
+    fsm.ensureDir(destinationPath + '/'+app_name)
+        .then(() =&gt; {
+            // 拷贝模板
+            fsm.copy(tmpPath, destinationPath + '/'+app_name, err =&gt; {
+                if (err) return console.log(err)
+                fn()
+            })
+        })
+}
+/**
+ * Determine if launched from cmd.exe
+ * 判断控制台环境（liux或者win获取其他）
+ */
+
+function launchedFromCmd() {
+    return process.platform === 'win32' &amp;&amp;
+        process.env._ === undefined;
+}
+
+
+/**
+ * node是使用process.stdin和process.stdout来实现标准输入和输出的
+ * readline 模块提供了一个接口，用于一次一行地读取可读流（例如 process.stdin）中的数据。 它可以使用以下方式访问：
+ */
+
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+// 控制台问答
+function confirm(msg, callback) {
+    rl.question(msg, function (input) {
+        callback(/^y|yes|ok|true$/i.test(input));
+    });
+}
+
+// 控制台问答
+function wrieQuestion(msg, callback) {
+    rl.question(msg, function (input) {
+        // rl.close()后就不再监听控制台输入了
+        rl.close();
+        callback(input)
+    });
+}
+
+/**
+ * 通过fs读取模板文件内容
+ */
+
+function loadTemplate(name) {
+    return fs.readFileSync(path.join(__dirname, '..', 'template', name), 'utf-8');
+}
+
+/**
+ * echo str &gt; path.
+ * 写入文件
+ * @param {String} path
+ * @param {String} str
+ */
+
+function write(path, str, mode) {
+    fs.writeFileSync(path, str, { mode: mode || 0666 });
+    console.log('   \x1b[36mcreate\x1b[0m : ' + path);
+  }
+
+/**
+ * 这里是主要解决在winodws上的一些bug，不用卡在这里，核心目的就是为了能让进程优雅退出
+ * Graceful exit for async STDIO
+ */
+
+function exit(code) {
+    // flush output for Node.js Windows pipe bug
+    // https://github.com/joyent/node/issues/6247 is just one bug example
+    // https://github.com/visionmedia/mocha/issues/333 has a good discussion
+    function done() {
+        if (!(draining--)) _exit(code);
+    }
+
+    var draining = 0;
+    var streams = [process.stdout, process.stderr];
+
+    exit.exited = true;
+
+    streams.forEach(function (stream) {
+        // submit empty write request and wait for completion
+        draining += 1;
+        stream.write('', done);
+    });
+
+    done();
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/2019/是时候谈谈JavaScript面向对象了.html" class="prev">是时候谈谈JavaScript面向对象了</a></span> <span class="next"><a href="/2019/HTTP请求的四种方式区别.html">HTTP请求的四种方式区别</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b998f59f.js" defer></script><script src="/assets/js/2.b4182e24.js" defer></script><script src="/assets/js/33.0cf47229.js" defer></script>
+  </body>
+</html>
