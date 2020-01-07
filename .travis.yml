@@ -11,15 +11,15 @@ script:
 - cd docs/.vuepress/dist
 - echo 'www.easyrentsh.xyz' > CNAME
 after_script:
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - node ./node_modules/grunt-cli/bin/grunt release
-  - git config --global user.email "1562055324@qq.com"
-  - git config --global user.name "harryzq"
-  - git init
-  - git add .
-  - git commit -m 'deploy'
-  - git push -f "https://${GH_TOKEN}@github.com/harryzq/harryzq.github.io.git" master
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- node ./node_modules/grunt-cli/bin/grunt release
+- git config --global user.email "1562055324@qq.com"
+- git config --global user.name "harryzq"
+- git init
+- git add .
+- git commit -m 'deploy'
+- git push -f "https://${GH_TOKEN}@github.com/harryzq/harryzq.github.io.git" master
 branches:
   only:
   - dev
@@ -33,4 +33,4 @@ deploy:
     branch: dev
 env:
   global:
-    secure: c0eNhMRq/mYL7l6gv/rGZaVwSWA5mHEBxLVYl18QrqIITuJguaExGVU1qQbndMPMwd/D5UJQE2JawoJvcTKlxclb18e66Kt3izoMQsXMQNwGobTziQG0miqKiJM01sA5puBnQ1Zol/LNTDuL3G+aPTGrXZ37rPldJYpni5mGEalDJwzlqpEvaZVo2EWiqCjtx/zN4UBkkNKY6BoANEe0Ep4LNaxlOSgtz8dCsODJJlrGrt/uksgarTFTamhQPdWTfjc+z1LlTTTeRfiAxgrddUCNLdHurePNM0k/jwpdLRUOlZMlLe0bQytmhHzCtCg6N9dGn99EIyT73nEkGiP40NevYrABwaDqboWE/+OJxy45ejOEt5YQH3yi3Grzd8YqjzuGTkkAu4wOg6AUm2LeMB+F2w0jqf3jK3adA6wJl7I7SNR127BOBKVwfV9TwQ9IOba7I3ufQZj3BR6YSzgyksolUbyWStoypT51H+8dhQqPkK/7Sv/I2zqsBRWHsJZZP4ZvvfOdtLYKrY0ToJCKRUfEJB9owKI+teXaF2KnkFcytOHpgOww6QYFbRbEZauRHi8ET5hVE6gof/SQkNxaaSTHaOfYW50p/OAyhwMZ4cQo5SsYNapwUfPrgtUNspIlAyCRs6Tamx/E52XhAbpMygGteRiL/qizMe9ErdFdv2s=
+  - secure: k/ZYXmmMcsqal5bP+gEtDHQ6CSYx2GUwZpM2hqgXdpfUHRy38qtodoZ3R1IJzZ7n7hdBRMqtMVaPbOYHbn7DKJ50wKCANIwgy0Z1hRaAq1egIGsh3McJPisf45pJgg32SzpnzaRuB51m5TK0Xz7zIQF37Pn2TgXDbhOJYr2vxOsZzUsmCXoDpHkqRXs7P51KenJibx6JIg4YQMawBCkkwlNRhASZoM24pE7lE0TQ2V98hBqSKoCbzhaHE8Q2SruKUqRQ2fsDADaSSr/tZLBcyAp32KPlC86fokAMLKTiakBFvEiJu8Im8Fhcbh7BF+Qj/FARB4kQnzVw+A6VGwIK4U3ENgNsWrDbKVRsVh01UsrWb8VZJKKXfkpMsT8a4P4lRVQAukzZOADs8MC7MhGKt/5fg22gbfUfOQCstIcxiN6mk5/QMQhCORZCQINWvR/dixyPjTmERYQ0dKyeUUl+QvzCx89MJAz7UH9SWB/a/dZ2VOKTXqS3d64uvjr+9U13g6TaDx1WI7FjgSGmXvvAkNJkXxyQhGyjQasBLlow/1B9MZbgfZXJBwembFJG/b58iAxDArIkXD1gwcug/NwqKrhZBgWCZLtXfTPmsobvY3FKfcJEc2icx64sNXzmKl506V40mTzRUJGt/mlCdXonb+bagl4su2KgrQs8+4a4Yvs=
