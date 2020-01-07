@@ -4,15 +4,23 @@ module.exports = {
   themeConfig: {
     activeHeaderLinks: false,
     sidebar: [
-        {
-            title: "javascript设计模式", // 必要的
-            collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1, // 可选的, 默认值是 1
-            children: [
-                '/js设计模式/Javascript设计模式学习1',
-                '/js设计模式/Javascript设计模式学习2'
-            ]
-          },
+      {
+        title: "2020年博客", // 必要的
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 1, // 可选的, 默认值是 1
+        children: [
+          "/2020/docker部署jenkins",
+        ]
+      },
+      {
+        title: "javascript设计模式", // 必要的
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 1, // 可选的, 默认值是 1
+        children: [
+          "/js设计模式/Javascript设计模式学习1",
+          "/js设计模式/Javascript设计模式学习2"
+        ]
+      },
       {
         title: "过去的博客", // 必要的
         collapsable: true, // 可选的, 默认值是 true,
@@ -51,8 +59,7 @@ module.exports = {
           "/2019/webpack下build报错",
           "/2019/zabbix平台搭建"
         ]
-      },
-      
+      }
     ]
   },
   configureWebpack: {

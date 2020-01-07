@@ -6,6 +6,11 @@ set -e
 # mount -o remount rw /
 # 生成静态文件
 # npm run docs:build
+git add .
+git commit -m'build'
+git push -f https://github.com/harryzq/harryzq.github.io.git dev
+
+vuepress build docs
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
