@@ -21,11 +21,11 @@ echo '
 node_modules 
 .VSCODE
 docs/.vuepress/dist' > .gitignore
-git config --global user.email "1562055324@qq.com"
-git config --global user.name "harryzq"
-git init
-git add -A
-git commit -m 'deploy'
+# git config --global user.email "1562055324@qq.com"
+# git config --global user.name "harryzq"
+# git init
+# git add -A
+# git commit -m 'deploy'
 
 
 # 建立远程链接

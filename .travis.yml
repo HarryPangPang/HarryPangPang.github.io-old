@@ -9,6 +9,11 @@ install:
 script:
   - npm run docs:build
   - sh ./deploy.sh
+  - git config --global user.email "1562055324@qq.com"
+  - git config --global user.name "harryzq"
+  - git init
+  - git add .
+  - git commit -m 'deploy'
   - git push -f "https://${GH_TOKEN}@github.com/harryzq/harryzq.github.io.git" master
 branches:
   only:
