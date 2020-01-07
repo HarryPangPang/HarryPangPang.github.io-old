@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - lts/*
+cache:
+  directories:
+    - node_modules #缓存依赖
 install:
   - npm ci
 script:
@@ -13,7 +16,7 @@ deploy:
   provider: pages
   skip-cleanup: true
   local_dir: docs/.vuepress/dist
-  github-token: 10824d76924a74a222f2aaf90a32f51ee57eca11 # a token generated on github allowing travis to push code on you repository
+  github-token: 11d5316c72bc316d9c4e520b889e43fbeb545052 # a token generated on github allowing travis to push code on you repository
   keep-history: true
   on:
     branch: dev
