@@ -10,16 +10,16 @@ script:
 - npm run docs:build
 - cd docs/.vuepress/dist
 - echo 'www.easyrentsh.xyz' > CNAME
-- git config --global user.email "1562055324@qq.com"
-- git config --global user.name "harryzq"
-- git init
-- git add .
-- git commit -m 'deploy'
-- git push -f "https://${GH_TOKEN}@github.com/harryzq/harryzq.github.io.git" master
 after_script:
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - node ./node_modules/grunt-cli/bin/grunt release
+  - git config --global user.email "1562055324@qq.com"
+  - git config --global user.name "harryzq"
+  - git init
+  - git add .
+  - git commit -m 'deploy'
+  - git push -f "https://${GH_TOKEN}@github.com/harryzq/harryzq.github.io.git" master
 branches:
   only:
   - dev
