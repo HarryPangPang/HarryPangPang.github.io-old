@@ -14,6 +14,15 @@ module.exports = {
         ]
       },
       {
+        title: "python基础学习",
+        collapsable: true,
+        sidebarDepth: 1, 
+        children: [
+          "/python基础学习/1",
+          "/python基础学习/2",
+        ]
+      },
+      {
         title: "javascript设计模式", // 必要的
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 1, // 可选的, 默认值是 1
