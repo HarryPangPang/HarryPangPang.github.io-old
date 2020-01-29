@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第一天 python的基本数据类型 | Harry&#39;s Blog</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.c7d45e2d.css" as="style"><link rel="preload" href="/assets/js/app.427014d7.js" as="script"><link rel="preload" href="/assets/js/2.b4182e24.js" as="script"><link rel="preload" href="/assets/js/43.be1674f0.js" as="script"><link rel="prefetch" href="/assets/js/10.ec7a14d1.js"><link rel="prefetch" href="/assets/js/11.68fd43cd.js"><link rel="prefetch" href="/assets/js/12.cb531b98.js"><link rel="prefetch" href="/assets/js/13.2117fb4d.js"><link rel="prefetch" href="/assets/js/14.95f820b4.js"><link rel="prefetch" href="/assets/js/15.ff37cb81.js"><link rel="prefetch" href="/assets/js/16.f94e9052.js"><link rel="prefetch" href="/assets/js/17.ead69c87.js"><link rel="prefetch" href="/assets/js/18.517dd641.js"><link rel="prefetch" href="/assets/js/19.17d14f38.js"><link rel="prefetch" href="/assets/js/20.5bfc367a.js"><link rel="prefetch" href="/assets/js/21.c1220b6f.js"><link rel="prefetch" href="/assets/js/22.d47ea806.js"><link rel="prefetch" href="/assets/js/23.68f3d4b0.js"><link rel="prefetch" href="/assets/js/24.e95df7f3.js"><link rel="prefetch" href="/assets/js/25.d985f29f.js"><link rel="prefetch" href="/assets/js/26.c08cf248.js"><link rel="prefetch" href="/assets/js/27.d84cca50.js"><link rel="prefetch" href="/assets/js/28.bb4c1ed9.js"><link rel="prefetch" href="/assets/js/29.2003a480.js"><link rel="prefetch" href="/assets/js/3.30d5dfea.js"><link rel="prefetch" href="/assets/js/30.0e921be7.js"><link rel="prefetch" href="/assets/js/31.bb5d9ed1.js"><link rel="prefetch" href="/assets/js/32.867850a9.js"><link rel="prefetch" href="/assets/js/33.0cf47229.js"><link rel="prefetch" href="/assets/js/34.554d5707.js"><link rel="prefetch" href="/assets/js/35.440ad71c.js"><link rel="prefetch" href="/assets/js/36.4a230733.js"><link rel="prefetch" href="/assets/js/37.8a4e5515.js"><link rel="prefetch" href="/assets/js/38.6fe7e942.js"><link rel="prefetch" href="/assets/js/39.9c582340.js"><link rel="prefetch" href="/assets/js/4.2d108d05.js"><link rel="prefetch" href="/assets/js/40.75ed2ee7.js"><link rel="prefetch" href="/assets/js/41.49835923.js"><link rel="prefetch" href="/assets/js/42.2ee6034d.js"><link rel="prefetch" href="/assets/js/44.df1932c5.js"><link rel="prefetch" href="/assets/js/45.9324d7a6.js"><link rel="prefetch" href="/assets/js/5.c199e918.js"><link rel="prefetch" href="/assets/js/6.85c03d0d.js"><link rel="prefetch" href="/assets/js/7.62c90daa.js"><link rel="prefetch" href="/assets/js/8.d4044af7.js"><link rel="prefetch" href="/assets/js/9.3beb6d47.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c7d45e2d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Harry's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>2020年博客</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/2020/docker部署jenkins.html" class="sidebar-link">docker部署jenkins</a></li><li><a href="/2020/gitpages自动部署.html" class="sidebar-link">github博客自动化部署</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>过去的博客</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="第一天-python的基本数据类型"><a href="#第一天-python的基本数据类型" class="header-anchor">#</a> 第一天 python的基本数据类型</h3> <h3 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h3> <p>本系列的python环境是基于python3的，旨在让读者快速了解python的开发，所以会尽量精简的去介绍和讲解，不会深究。</p> <p>关于python3的安装我就不多说了，搜出来一大堆，推荐菜鸟教程~</p> <p>下面我们就正式开始</p> <h3 id="_1-python介绍"><a href="#_1-python介绍" class="header-anchor">#</a> 1. python介绍</h3> <p>python的是以空格来划分程序段的，所以在写python程序时一定要注意空格，同时python对大小写敏感，命名时要注意。
+python的注释和shell相似，采用#符号来注释，python多行注释</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;&quot;&quot;
+这是多行注释，用三个双引号
+这是多行注释，用三个双引号 
+这是多行注释，用三个双引号
+&quot;&quot;&quot;
+</code></pre></div><h3 id="_2-python的hello-world"><a href="#_2-python的hello-world" class="header-anchor">#</a> 2. python的hello world!</h3> <p>下面我们来学习一下使用python来写一句hello world。相比较于java之类的繁琐，python中打印hello world就显得非常简单了，这得益于python是解释型语言而非编译型。两者区别这里就不展开介绍了。</p> <p>下面开始：</p> <p>打开shell（windows 是cmd mac是 iterminal），输入：</p> <div class="language- extra-class"><pre class="language-text"><code>python
+</code></pre></div><p>就会看到下面的内容，这就代表我们进入了python的交互界面</p> <div class="language- extra-class"><pre class="language-text"><code>Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit (AMD64)] on win32
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;
+</code></pre></div><p>再输入</p> <div class="language- extra-class"><pre class="language-text"><code>print('Hello World!')
+</code></pre></div><p>我们就看到</p> <div class="language- extra-class"><pre class="language-text"><code>&gt;&gt;&gt; print('Hello World!')
+Hello World!
+&gt;&gt;&gt;
+</code></pre></div><p>成功！</p> <h3 id="_3-python的基本数据类型"><a href="#_3-python的基本数据类型" class="header-anchor">#</a> 3. python的基本数据类型</h3> <h4 id="number（数字）："><a href="#number（数字）：" class="header-anchor">#</a> Number（数字）：</h4> <p>Python的数字类型包括整数和浮点数，</p> <ol><li><p>整数</p> <p>正整数和负整数，如1,2,-1,-2</p></li> <li><p>浮点数</p> <p>也就是小数，如1.2 1.03这样（注意：计算机对浮点数的计算不是准确的）</p></li></ol> <h4 id="string（字符串）"><a href="#string（字符串）" class="header-anchor">#</a> String（字符串）</h4> <p>字符串，即是以单引号或双引号成对组成，如'a' &quot;b&quot;这样，如果单引号需要作为符号时，则是 &quot;I'm ok&quot; 或者使用 \ 符号来转义， 例：'I'am ok' 或 &quot;I&quot;am ok&quot; 这样来表示。</p> <h4 id="boolen（布尔值）"><a href="#boolen（布尔值）" class="header-anchor">#</a> Boolen（布尔值）</h4> <p>布尔值只有Ture和False两个值（注意首字母大写）</p> <h4 id="none（空值）"><a href="#none（空值）" class="header-anchor">#</a> None（空值）</h4> <p>空值不等同于0，0是有意义的数字。</p> <h4 id="list（列表）"><a href="#list（列表）" class="header-anchor">#</a> List（列表）</h4> <p>列表就是一系列元素的有序集合，元素可以是任何内容。比如：</p> <div class="language- extra-class"><pre class="language-text"><code># 下面就是由1,'a',0.5三个元素组成的列表。
+[1,'a',0.5]
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>#!/usr/bin/python3
+ 
+list = [ 'abcd', 786 , 2.23, 70.2 ] #list是一个变量，之后会介绍
+tinylist = [123, 'a']
+ 
+print (list)            # 输出完整列表
+print (list[0])         # 输出列表第一个元素
+print (list[-1])        # 输出倒数第一个元素
+print (list[1:3])       # 从第二个开始输出到第三个元素
+print (list[2:])        # 输出从第三个元素开始的所有元素
+print (tinylist * 2)    # 输出两次列表
+print (list + tinylist) # 连接列表
+</code></pre></div><p>列表的操作：</p> <div class="language- extra-class"><pre class="language-text"><code>list = [ 'a', 'b']
+
+list[0] = 'c' #list =&gt; [ 'c', 'b'] 替换列表第一项
+del list[1]   #list =&gt; [ 'a'] 删除列表第二项
+len(list)     #获取列表长度 =&gt; 2
+list.append('c') #list =&gt; [ 'a', 'b', 'c'] 在列表末尾添加新的元素
+list.pop(1)   #list =&gt; [ 'a'] 删除列表指定位置的元素
+</code></pre></div><p>详细内置方法：</p> <table><thead><tr><th>函数&amp;方法</th> <th>描述</th></tr></thead> <tbody><tr><td>len(list)</td> <td>列表元素个数</td></tr> <tr><td>max(list)</td> <td>返回列表元素最大值</td></tr> <tr><td>min(list)</td> <td>返回列表元素最小值</td></tr> <tr><td>list(seq)</td> <td>将元组转换为列表</td></tr> <tr><td>list.append(obj)</td> <td>在列表末尾添加新的对象</td></tr> <tr><td>list.count(obj)</td> <td>统计某个元素在列表中出现的次数</td></tr> <tr><td>list.extend(seq)</td> <td>在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</td></tr> <tr><td>list.index(obj)</td> <td>从列表中找出某个值第一个匹配项的索引位置</td></tr> <tr><td>list.insert(index, obj)</td> <td>将对象插入列表</td></tr> <tr><td>list.pop(obj=list[-1])</td> <td>移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</td></tr> <tr><td>list.remove(obj)</td> <td>移除列表中的一个元素（参数是列表中元素），并且不返回任何值</td></tr> <tr><td>list.reverse()</td> <td>反向列表中元素</td></tr> <tr><td>list.sort([func])</td> <td>对原列表进行排序</td></tr></tbody></table> <p>List（列表）运算符：</p> <p>列表对 + 和 * 的操作符与字符串相似。+ 号用于组合列表，* 号用于重复列表</p> <table><thead><tr><th>Python 表达式</th> <th>结果</th> <th>描述</th></tr></thead> <tbody><tr><td>len([1, 2, 3])</td> <td>3</td> <td>计算元素个数</td></tr> <tr><td>[1, 2, 3] + [4, 5, 6]</td> <td>[1, 2, 3, 4, 5, 6]</td> <td>组合</td></tr> <tr><td>['Hi!'] * 4</td> <td>['Hi!', 'Hi!', 'Hi!', 'Hi!']</td> <td>复制</td></tr> <tr><td>3 in [1, 2, 3]</td> <td>True</td> <td>元素是否存在于列表中</td></tr> <tr><td>for x in [1, 2, 3]: print x,</td> <td>1 2 3</td> <td>迭代</td></tr></tbody></table> <h4 id="tuple（元组）"><a href="#tuple（元组）" class="header-anchor">#</a> Tuple（元组）</h4> <p>Tuple（元组）和list很像，也是一系列元素的有序集合。区别在于元组一旦定义就不可以更改，提高了数据的可靠性和安全性。</p> <div class="language- extra-class"><pre class="language-text"><code># 下面就是由1,'a',0.5三个元素组成的元组。
+(1,'a',0.5)
+
+#元组中只包含一个元素时，需要在元素后面添加逗号
+(1,)
+</code></pre></div><p>Tuple（元组）的访问基本和list一致。</p> <p>tuple （元组）运算符：
+与字符串一样，元组之间可以使用 + 号和 * 号进行运算。这就意味着他们可以组合和复制，运算后会生成一个新的元组。</p> <table><thead><tr><th>Python 表达式</th> <th>结果</th> <th>描述</th></tr></thead> <tbody><tr><td>len((1, 2, 3))</td> <td>3</td> <td>计算元素个数</td></tr> <tr><td>(1, 2, 3) + (4, 5, 6)</td> <td>(1, 2, 3, 4, 5, 6)</td> <td>连接</td></tr> <tr><td>('Hi!',) * 4</td> <td>('Hi!', 'Hi!', 'Hi!', 'Hi!')</td> <td>复制</td></tr> <tr><td>3 in (1, 2, 3)</td> <td>True</td> <td>元素是否存在</td></tr> <tr><td>for x in (1, 2, 3): print(x)</td> <td>1 2 3</td> <td>迭代</td></tr></tbody></table> <p>元组内置方法：</p> <table><thead><tr><th>方法</th> <th>描述</th></tr></thead> <tbody><tr><td>len(tuple)</td> <td>计算元组元素个数</td></tr> <tr><td>max(tuple)</td> <td>返回元组中元素最大值</td></tr> <tr><td>min(tuple)</td> <td>返回元组中元素最小值</td></tr> <tr><td>tuple(seq)</td> <td>将列表转换为元组</td></tr></tbody></table> <h4 id="dictionary（字典）"><a href="#dictionary（字典）" class="header-anchor">#</a> Dictionary（字典）</h4> <p>Dictionary（字典）也称dict,是一种可变容器，采用键值对的方式来存储数据。
+使用如下：</p> <div class="language- extra-class"><pre class="language-text"><code>student = {'name':'lilei'} # {'name':'lilei'}就是一个dict
+
+</code></pre></div><p>要取得学生的名称，可以使用</p> <div class="language- extra-class"><pre class="language-text"><code>print(student['name']) #结果：lilei
+</code></pre></div><p>这时学生没有age这个属性，但我们仍然去访问，会出现下面的内容</p> <div class="language- extra-class"><pre class="language-text"><code>&gt;&gt;&gt; student = {'name':'lilei'}
+&gt;&gt;&gt; print(student['name'])
+lilei
+&gt;&gt;&gt; print(student['age'])
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+KeyError: 'age'
+&gt;&gt;&gt;
+</code></pre></div><p>为了防止报错，我们可以使用下面的方法</p> <div class="language- extra-class"><pre class="language-text"><code>print(student.get('age')) 
+</code></pre></div><p>结果就友好多了</p> <div class="language- extra-class"><pre class="language-text"><code>&gt;&gt;&gt; print(student.get('age'))
+None
+&gt;&gt;&gt;
+</code></pre></div><p>dict （字典） 的函数和方法</p> <table><thead><tr><th>方法和函数</th> <th>描述</th></tr></thead> <tbody><tr><td>len(dict)</td> <td>计算字典元素个数</td></tr> <tr><td>str(dict)</td> <td>输出字典可打印的字符串表示</td></tr> <tr><td>type(variable)</td> <td>返回输入的变量类型，如果变量是字典就返回字典类型</td></tr> <tr><td>dict.clear()</td> <td>删除字典内所有元素</td></tr> <tr><td>dict.copy()</td> <td>返回一个字典的浅复制</td></tr> <tr><td>dict.values()</td> <td>以列表返回字典中的所有值</td></tr> <tr><td>popitem()</td> <td>随机返回并删除字典中的一对键和值</td></tr> <tr><td>dict.items()</td> <td>以列表返回可遍历的(键, 值) 元组数组</td></tr></tbody></table> <h4 id="set（集合）"><a href="#set（集合）" class="header-anchor">#</a> Set（集合）</h4> <p>集合（set）是一个无序的不重复元素序列。使用大括号 { } 或者 set() 函数创建集合，
+集合的操作基本和dict一样
+如下：</p> <div class="language- extra-class"><pre class="language-text"><code>students = {'lilei','zhaosi','xiaohong'} #{'lilei','zhaosi','xiaohong'}就是一个集合
+
+set(['lilei','zhaosi','xiaohong']) #set创建集合需要提供一个列表
+
+students.add('xiaoming') # 增加元素 结果=&gt; {'zhaosi', 'xiaohong', 'lilei', 'xiaoming'}
+students.add('xiaoming') # 再次加入xiaoming结果=&gt; {'zhaosi', 'xiaohong', 'lilei', 'xiaoming'},因为set不允许重复，而xiaoming重复了，所以只会留下一个xiaoming
+
+students.remove( 'xiaoming' ) #删除元素 结果=&gt; {'zhaosi', 'xiaohong', 'lilei''}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.427014d7.js" defer></script><script src="/assets/js/2.b4182e24.js" defer></script><script src="/assets/js/43.be1674f0.js" defer></script>
+  </body>
+</html>
