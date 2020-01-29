@@ -6,7 +6,7 @@
   "author": "qiangzhang <qiang.zhang@garena.cn>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "start": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "build":"bash deploy.sh "
   },
