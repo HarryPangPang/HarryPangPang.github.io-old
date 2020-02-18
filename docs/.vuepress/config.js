@@ -77,6 +77,14 @@ module.exports = {
           "/2019/webpack下build报错",
           "/2019/zabbix平台搭建"
         ]
+      },
+      {
+        title: "others", // 必要的
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 1, // 可选的, 默认值是 1
+        children: [
+          "/others/qrcode"
+        ]
       }
     ]
   },
