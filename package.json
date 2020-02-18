@@ -8,9 +8,12 @@
   "scripts": {
     "start": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "build":"bash deploy.sh "
+    "build": "bash deploy.sh "
   },
   "devDependencies": {
     "vuepress": "^1.2.0"
+  },
+  "dependencies": {
+    "qrcode": "^1.4.4"
   }
 }

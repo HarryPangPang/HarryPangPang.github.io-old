@@ -14,6 +14,14 @@ module.exports = {
         ]
       },
       {
+        title: "js忍者秘籍读书笔记",
+        collapsable: true,
+        sidebarDepth: 0, 
+        children: [
+          "/js忍者秘籍读书笔记/1",
+        ]
+      },
+      {
         title: "python基础学习",
         collapsable: true,
         sidebarDepth: 1, 
