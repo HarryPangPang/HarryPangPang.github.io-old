@@ -28,6 +28,7 @@ export default {
                 colorLight : "#fff",
                 correctLevel : QRCode.CorrectLevel.H
             });
+            this.message=''
         },
         clearQR(){
             let qrnode = document.getElementById("qrcode")
