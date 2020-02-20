@@ -14,7 +14,6 @@ vuepress build docs
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
-cp -rf ../cusHtml ./interview 
 
 # 如果是发布到自定义域名
 echo 'www.easyrentsh.xyz' > CNAME

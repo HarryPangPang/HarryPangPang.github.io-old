@@ -83,7 +83,7 @@ module.exports = {
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 1, // 可选的, 默认值是 1
         children: [
-          "/others/qrcode"
+          "/others/qrcode",
         ]
       }
     ]
