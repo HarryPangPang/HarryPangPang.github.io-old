@@ -16,7 +16,7 @@ vuepress build docs
 cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
-echo 'www.easyrentsh.xyz' > CNAME
+# echo 'www.easyrentsh.xyz' > CNAME
 echo '
 node_modules 
 .VSCODE
