@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qrcode</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <style>
+        body{
+            display: flex;
+            overflow-y: auto;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #333;
+            font-size: 14px;
+        }
+        .content{
+            border: 1px solid #cccccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <input class="content" type="text"/>
+        <button id="generate-qrcode">确定</button>
+        <button id="clear-qrcode">清除</button>
+    </div>
+    <div id="qrcode" class="pic-qr"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        function GenQRCode(text){
+            new QRCode(document.getElementById("qrcode"), {
+            text: text.toString(),
+            width: 360,
+            height: 360,
+            colorDark : "#000",
+            colorLight : "#fff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        }
+
+        $('#generate-qrcode').click(function (e) { 
+            e.preventDefault();
+            let value = $('.content').val();
+            if(!value){
+                alert('请输入内容')
+            }else{
+                GenQRCode(value)
+            }
+        });
+
+        $('#clear-qrcode').click(function (e) { 
+            e.preventDefault();
+            $('#qrcode').empty()
+        });
+    });
+</script>
+</body>
+</html> 
