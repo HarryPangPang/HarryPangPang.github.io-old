@@ -10,7 +10,10 @@ module.exports = {
         sidebarDepth: 1, // 可选的, 默认值是 1
         children: [
           "/2020/docker部署jenkins",
-          "/2020/gitpages自动部署"
+          "/2020/gitpages自动部署",
+          "/2020/vue-property-decorator使用指南",
+          "/2020/vue-router简单实现",
+          "/2020/vuex简单实现",
         ]
       },
       {

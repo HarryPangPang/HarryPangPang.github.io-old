@@ -1,3 +1,4 @@
+### vuex简单版学习
 ```
 let Vue;
 class Store {
