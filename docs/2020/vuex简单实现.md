@@ -1,4 +1,4 @@
-```language=javascript
+```
 let Vue;
 class Store {
   constructor(options) {

@@ -1,4 +1,4 @@
-```language=vue
+```
 import Home from "@/views/Home.vue";
 import Vue from "vue";
 
