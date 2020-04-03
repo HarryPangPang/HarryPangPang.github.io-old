@@ -14,6 +14,7 @@ module.exports = {
           "/2020/vue-property-decorator使用指南",
           "/2020/vue-router简单实现",
           "/2020/vuex简单实现",
+          "/2020/go使用笔记",
         ]
       },
       {
