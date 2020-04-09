@@ -15,6 +15,7 @@ module.exports = {
           "/2020/vue-router简单实现",
           "/2020/vuex简单实现",
           "/2020/go使用笔记",
+          "/2020/Gitlab ci/cd"
         ]
       },
       {
