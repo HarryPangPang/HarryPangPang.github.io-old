@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>zabbix平台搭建 | Harry&#39;s Blog</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.c7d45e2d.css" as="style"><link rel="preload" href="/assets/js/app.6ea698b8.js" as="script"><link rel="preload" href="/assets/js/2.b4182e24.js" as="script"><link rel="preload" href="/assets/js/21.c1220b6f.js" as="script"><link rel="prefetch" href="/assets/js/10.ec7a14d1.js"><link rel="prefetch" href="/assets/js/11.68fd43cd.js"><link rel="prefetch" href="/assets/js/12.cb531b98.js"><link rel="prefetch" href="/assets/js/13.2117fb4d.js"><link rel="prefetch" href="/assets/js/14.95f820b4.js"><link rel="prefetch" href="/assets/js/15.ff37cb81.js"><link rel="prefetch" href="/assets/js/16.f94e9052.js"><link rel="prefetch" href="/assets/js/17.ead69c87.js"><link rel="prefetch" href="/assets/js/18.517dd641.js"><link rel="prefetch" href="/assets/js/19.17d14f38.js"><link rel="prefetch" href="/assets/js/20.5bfc367a.js"><link rel="prefetch" href="/assets/js/22.d47ea806.js"><link rel="prefetch" href="/assets/js/23.68f3d4b0.js"><link rel="prefetch" href="/assets/js/24.e95df7f3.js"><link rel="prefetch" href="/assets/js/25.d985f29f.js"><link rel="prefetch" href="/assets/js/26.c08cf248.js"><link rel="prefetch" href="/assets/js/27.d84cca50.js"><link rel="prefetch" href="/assets/js/28.bb4c1ed9.js"><link rel="prefetch" href="/assets/js/29.2003a480.js"><link rel="prefetch" href="/assets/js/3.3466fb63.js"><link rel="prefetch" href="/assets/js/30.0e921be7.js"><link rel="prefetch" href="/assets/js/31.bb5d9ed1.js"><link rel="prefetch" href="/assets/js/32.867850a9.js"><link rel="prefetch" href="/assets/js/33.0cf47229.js"><link rel="prefetch" href="/assets/js/34.554d5707.js"><link rel="prefetch" href="/assets/js/35.440ad71c.js"><link rel="prefetch" href="/assets/js/36.4a230733.js"><link rel="prefetch" href="/assets/js/37.f0e8ba0b.js"><link rel="prefetch" href="/assets/js/38.15fa98bf.js"><link rel="prefetch" href="/assets/js/39.19f12e6b.js"><link rel="prefetch" href="/assets/js/4.2d108d05.js"><link rel="prefetch" href="/assets/js/40.3e2ab2b8.js"><link rel="prefetch" href="/assets/js/41.11d9c3d2.js"><link rel="prefetch" href="/assets/js/42.f09a5ebc.js"><link rel="prefetch" href="/assets/js/43.a03a6a5c.js"><link rel="prefetch" href="/assets/js/44.d8ec3f22.js"><link rel="prefetch" href="/assets/js/45.3e91c27e.js"><link rel="prefetch" href="/assets/js/46.086344c8.js"><link rel="prefetch" href="/assets/js/47.b7b2f12a.js"><link rel="prefetch" href="/assets/js/48.a8cefb12.js"><link rel="prefetch" href="/assets/js/49.6af65655.js"><link rel="prefetch" href="/assets/js/5.c199e918.js"><link rel="prefetch" href="/assets/js/50.822624e5.js"><link rel="prefetch" href="/assets/js/51.d7e5822d.js"><link rel="prefetch" href="/assets/js/52.f9a0e91a.js"><link rel="prefetch" href="/assets/js/53.ae07c391.js"><link rel="prefetch" href="/assets/js/54.238a29b4.js"><link rel="prefetch" href="/assets/js/6.85c03d0d.js"><link rel="prefetch" href="/assets/js/7.62c90daa.js"><link rel="prefetch" href="/assets/js/8.d4044af7.js"><link rel="prefetch" href="/assets/js/9.3beb6d47.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c7d45e2d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Harry's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2020年博客</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js忍者秘籍读书笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python基础学习</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>过去的博客</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/2019/10个前端面试必会题.html" class="sidebar-link">10个前端面试必会题目！（适用于中高级）</a></li><li><a href="/2019/201901面试题分享.html" class="sidebar-link">201901面试题分享</a></li><li><a href="/2019/常用的一些git命令行.html" class="sidebar-link">常用的一些git命令行</a></li><li><a href="/2019/发布流程.html" class="sidebar-link">发布流程</a></li><li><a href="/2019/函数节流与防抖.html" class="sidebar-link">函数节流与防抖</a></li><li><a href="/2019/函数柯里化.html" class="sidebar-link">函数柯里化（curry)</a></li><li><a href="/2019/函数声明VS函数表达式.html" class="sidebar-link">函数声明？函数表达式？我该怎么选？！</a></li><li><a href="/2019/看懂js中this关键字的指向问题.html" class="sidebar-link">看懂js中this关键字的指向问题</a></li><li><a href="/2019/浏览器缓存的了解.html" class="sidebar-link">浏览器缓存的了解</a></li><li><a href="/2019/前端进阶学习路径.html" class="sidebar-link">前端进阶学习路径</a></li><li><a href="/2019/前端知识点190111.html" class="sidebar-link">前端知识点1901</a></li><li><a href="/2019/强制缓存（200）和协商缓存（304）.html" class="sidebar-link">强制缓存（200）和协商缓存（304）</a></li><li><a href="/2019/如何理解es6中的class以及class中的constructor函数.html" class="sidebar-link">如何理解es6中的class以及class中的constructor函数</a></li><li><a href="/2019/如何让小孩学习javascript.html" class="sidebar-link">如何让小孩学习javascript</a></li><li><a href="/2019/十分钟了解ajax.html" class="sidebar-link">十分钟了解ajax</a></li><li><a href="/2019/是时候谈谈JavaScript面向对象了.html" class="sidebar-link">是时候谈谈JavaScript面向对象了</a></li><li><a href="/2019/手把手教你实现脚手架工具Koa-generator.html" class="sidebar-link">手把手教你实现脚手架工具Koa-generator</a></li><li><a href="/2019/HTTP请求的四种方式区别.html" class="sidebar-link">HTTP请求的四种方式区别</a></li><li><a href="/2019/javascript-闭包.html" class="sidebar-link">javascript-闭包</a></li><li><a href="/2019/Javascript常见的内存泄漏.html" class="sidebar-link">Javascript常见的内存泄漏</a></li><li><a href="/2019/javascript跨域.html" class="sidebar-link">javascript跨域</a></li><li><a href="/2019/JavaScript执行环境-执行栈.html" class="sidebar-link">JavaScript执行环境-执行栈</a></li><li><a href="/2019/MySQL8-0-12-secure-file-priv数据导出问题解决.html" class="sidebar-link">MySQL8.0.12--secure-file-priv数据导出问题解决</a></li><li><a href="/2019/React_V16入门手册.html" class="sidebar-link">React_V16入门手册</a></li><li><a href="/2019/react16配置.html" class="sidebar-link">/2019/react16配置.html</a></li><li><a href="/2019/react生命周期.html" class="sidebar-link">react生命周期</a></li><li><a href="/2019/React虚拟dom和diff算法.html" class="sidebar-link">React虚拟dom和diff算法</a></li><li><a href="/2019/React学习笔记.html" class="sidebar-link">React学习笔记</a></li><li><a href="/2019/Vue使用踩坑记录.html" class="sidebar-link">Vue使用踩坑记录</a></li><li><a href="/2019/vue中AsyncAwait的使用示例.html" class="sidebar-link">vue中AsyncAwait的使用示例</a></li><li><a href="/2019/webpack下build报错.html" class="sidebar-link">webpack下build报错</a></li><li><a href="/2019/zabbix平台搭建.html" class="active sidebar-link">zabbix平台搭建</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>others</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>最近给公司搞了个zabbix平台监测，不得不说，网上的文章太杂了
+下面是我使用成功在centos7安装zabbix 3.11.4的命令
+1.1 安装依赖包：</p> <div class="language- extra-class"><pre class="language-text"><code>yum -y install wget net-snmp-devel OpenIPMI-devel httpd openssl-devel java lrzsz fping-devel libcurl-devel perl-DBI pcre-devel libxml2 libxml2-devel mysql-devel gcc php php-bcmath php-gd php-xml php-mbstring php-ldap php-mysql.x86_64 php-pear php-xmlrpc  net-tools wget vim-enhanced
+</code></pre></div><p>1.2 关闭防火墙：</p> <div class="language- extra-class"><pre class="language-text"><code># systemctl stop firewalld.service
+# systemctl disable firewalld.service 
+需要关闭 selinux，一定要关闭这个，开启selinux会引起一连串问题，甚至zabbix的discovery功能也不能正常使用
+# sed -i &quot;s/SELINUX=enforcing/SELINUX=disabled/g&quot; /etc/selinux/config
+确认是否修改成功
+# grep SELINUX /etc/selinux/config
+然后重启系统即可
+
+# reboot
+</code></pre></div><p>2.1 搭建lamp环境
+在centos7上安装zabbix server3.0之前，我们首先搭建zabbix所需要的lamp环境。</p> <p>下载最新的yum源，如下：</p> <div class="language- extra-class"><pre class="language-text"><code># wget -P /etc/yum.repos.d http://mirrors.aliyun.com/repo/Centos-7.repo
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf289ca12ca6f?w=500&amp;h=138&amp;f=png&amp;s=54932" alt="image.png">
+在开始安装之前，还需要说明下centos7自带的mysql是mariadb，我们可以通过如下命令查看：</p> <div class="language- extra-class"><pre class="language-text"><code>yum search mysql|tac
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf289cac5b93a?w=550&amp;h=117&amp;f=png&amp;s=20151" alt="image.png">
+现在开始安装lamp环境，使用如下命令：</p> <div class="language- extra-class"><pre class="language-text"><code>yum -y install mariadb mariadb-server php php-mysql httpd
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf289caebc541?w=500&amp;h=210&amp;f=png&amp;s=99112" alt="image.png"></p> <p>通过上图，我们可以很明显的看出centos7默认安装的是php5.4、httpd2.4和maradb5.5，这个完全符合zabbix3.0对软件版本的要求。</p> <p>lamp安装完毕后，我们现在来配置mysql数据库。</p> <p>设置开机自启动mysql，并启动mysql，使用如下命令：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# systemctl enable mariadb.service
+[root@zabbix ~]# systemctl start mariadb.service
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf289cc84fa02?w=886&amp;h=66&amp;f=png&amp;s=3094" alt="image.png">
+初始化mysql数据库，并配置root用户密码。使用如下命令：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# mysql_secure_installation
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf289cde7dd14?w=500&amp;h=342&amp;f=png&amp;s=104894" alt="image.png"> <img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf289cdfa42e9?w=426&amp;h=136&amp;f=png&amp;s=2147" alt="image.png"> <img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf289f31c1c10?w=500&amp;h=409&amp;f=png&amp;s=105873" alt="image.png">
+注意：在上图中的Enter current passwdord for root处，我们直接敲回车键即可。因为centos7上mysql的默认root用户密码为空。
+上图中主要是为root用户配置密码，并刷新相关权限。（密码设为123456，只为实验用，生产环境自定义）
+Remove anonymous users? 删除匿名用户？
+Disallow root login remotely? 禁止root远程登陆
+Remove test database and access to it? 删除测试数据库并且和访问它
+Reload privilege tables now? 重新载入特权表
+上图中主要是配置匿名用户、test用户以及root用户远程连接等相关配置。
+mysql初始化完毕后，我们现在来创建zabbix数据库及其用户，使用如下命令：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# mysql -uroot -p123456 -e &quot;create database zabbix default character set utf8 collate utf8_bin;&quot;
+
+[root@zabbix ~]# mysql -uroot -p123456 -e &quot;grant all on zabbix.* to &quot;zabbix&quot;@&quot;%&quot; identified by &quot;zabbix&quot;;&quot;
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf289f80f9ba8?w=550&amp;h=71&amp;f=png&amp;s=39165" alt="image.png">
+现在来测试刚刚创建的zabbix用户，是否可以连接mysql数据库，如下：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# mysql -uzabbix -pzabbix
+
+MariaDB [(none)]&gt; show databases;
+
+MariaDB [(none)]&gt; quit
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf289fe4f7f03?w=500&amp;h=210&amp;f=png&amp;s=49276" alt="image.png">
+通过上图，我们可以很明显的看出zabbix用户是可以正常连接数据库的。</p> <p>启动apache以及开放80端口，如下：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# systemctl start httpd.service
+
+[root@zabbix ~]# netstat -ltun
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a03047765?w=500&amp;h=118&amp;f=png&amp;s=45381" alt="image.png"></p> <p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a08b208e6?w=615&amp;h=21&amp;f=png&amp;s=1120" alt="image.png">
+到此lamp环境已经全部搭建完毕。
+浏览器输入IP地址即可看到如下
+<img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a0b3a3547?w=500&amp;h=113&amp;f=png&amp;s=75540" alt="image.png">
+2.2 服务器端安装zabbix server3.0（zabbix server）
+lamp环境搭建完毕后，我们现在开始正式安装zabbix3.0。</p> <p>安装zabbix3.0所需要EPEL源和zabbix的yum源，如下：</p> <div class="language- extra-class"><pre class="language-text"><code>#rpm -ivh https://mirrors.aliyun.com/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a26598a68?w=500&amp;h=65&amp;f=png&amp;s=33448" alt="image.png"></p> <div class="language- extra-class"><pre class="language-text"><code>#rpm -ivh http://repo.zabbix.com/zabbix/3.0/rhel/7/x86_64/zabbix-release-3.0-1.el7.noarch.rpm
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a2704d6e7?w=825&amp;h=98&amp;f=png&amp;s=5156" alt="image.png">
+以上安装完毕后，我们现在来正式安装zabbix3.0，使用如下命令：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# yum -y install zabbix-server-mysql zabbix-web-mysql zabbix-get
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a309e3504?w=814&amp;h=304&amp;f=png&amp;s=31892" alt="image.png"> <img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a3d3b20be?w=827&amp;h=129&amp;f=png&amp;s=4702" alt="image.png"></p> <p>通过上图，我们可以很明显的看出目前zabbix server是3.0.5版本的。</p> <p>以上安装完毕后，我们现在开始进行zabbix的相关配置。</p> <p>导入zabbix数据库结构，如下：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# cd /usr/share/doc/zabbix-server-mysql-3.0.5/
+
+[root@zabbix zabbix-server-mysql-3.0.5]# zcat create.sql.gz | mysql -uroot -pDe123456 zabbix
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a3e070b44?w=732&amp;h=67&amp;f=png&amp;s=3377" alt="image.png">
+数据库导入完毕后，我们现在来修改zabbix sever的配置文件，如下：（我们只需要关注 DBHost、DBName、DBUser、
+DBPassword 几项即可。这几项是配置zabbix server连接mysql数据库的参数。）</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# vi /etc/zabbix/zabbix_server.conf
+
+LogFile=/var/log/zabbix/zabbix_server.log
+
+LogFileSize=0
+
+PidFile=/var/run/zabbix/zabbix_server.pid
+
+DBHost=localhost
+
+DBName=zabbix
+
+DBUser=zabbix
+
+DBPassword=zabbix
+
+SNMPTrapperFile=/var/log/snmptrap/snmptrap.log
+
+Timeout=4
+
+AlertScriptsPath=/usr/lib/zabbix/alertscripts
+
+ExternalScripts=/usr/lib/zabbix/externalscripts
+
+LogSlowQueries=3000
+</code></pre></div><p>以上修改完毕后，我们再来修改下zabbix.conf文件。如下：</p> <div class="language- extra-class"><pre class="language-text"><code>vi /etc/httpd/conf.d/zabbix.conf
+
+Alias /zabbix /usr/share/zabbix
+
+Options FollowSymLinks
+
+AllowOverride None
+
+Require all granted
+
+php_value max_execution_time 300
+
+php_value memory_limit 128M
+
+php_value post_max_size 16M
+
+php_value upload_max_filesize 2M
+
+php_value max_input_time 300
+
+php_value always_populate_raw_post_data -1
+
+   php_value date.timezone Asia/Shanghai 
+</code></pre></div><p>修改最后一项php_value date.timezone Asia/Shanghai 就行，定义php的时区
+以上修改完毕后，我们把把zabbix-server加入开机启动，并启动zabbix-server，如下：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# systemctl start zabbix-server.service
+
+[root@zabbix ~]# systemctl enable zabbix-server.service
+</code></pre></div><p>最后重启apache，如下：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# systemctl restart httpd.service
+</code></pre></div><p>3.1配置zabbix
+登录http://ip/zabbix/setup.php（ip就是你服务器的IP地址）
+一开始会有要输入密码的时候，如下
+<img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a48afcfca?w=611&amp;h=231&amp;f=png&amp;s=49591" alt="image.png">
+输入之前设置的数据库密码即可
+接下来，很重要！
+一路next。。。
+然后就点登录 默认用户名是Admin 密码 zabbix 然后点击sign in
+zabbix server端就设置完毕
+4.1 配置客户端安装zabbix agent（被监测的服务器）
+zabbix agent的安装比较简单，我们只需要安装相应的仓库，然后执行安装命令即可。</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# yum clean all
+
+[root@zabbix ~]# yum -y install zabbix zabbix-agent
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a4c3cf45b?w=500&amp;h=156&amp;f=png&amp;s=64317" alt="image.png"> <img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a5aa62ae4?w=629&amp;h=221&amp;f=png&amp;s=54174" alt="image.png">
+在安装时如出现如上图所示错误，原因是软件这两个版本不一致，仔细观察发现这两个软件包使用了不同的仓库，把epel的关闭(enabled=0，位于/etc/yum.repos.d/epel.repo)再重装
+4.2 配置zabbix agent</p> <p>zabbix agent的配置很简单，只需要修改zabbix agent配置文件中的Server、ServerActive和Hostname这三项即可。</p> <p>其中Server、ServerActive是zabbix server服务器的IP地址，Hostname是被监控端的IP地址，如下：</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# vi /etc/zabbix/zabbix_agentd.conf
+
+PidFile=/var/run/zabbix/zabbix_agentd.pid
+
+LogFile=/var/log/zabbix/zabbix_agentd.log
+
+LogFileSize=0
+
+Server=127.0.0.1
+
+ServerActive=127.0.0.1
+
+Hostname=127.0.0.1
+
+Include=/etc/zabbix/zabbix_agentd.d/
+</code></pre></div><p>以上配置完毕后，我们在zabbix web端添加该监控机器时，只需要把honst name与该配置文件中的hostname对应即可。如下：</p> <p>Server=服务器ip地址</p> <p>ServerActive=服务器ip地址</p> <p>Hostname=客户端ip地址</p> <p>Server被动ServerActive主动</p> <p>到此zabbix agent就已经安装完毕。</p> <p>启动客户端</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# zabbix_agentd -c /etc/zabbix/zabbix_agentd.conf
+
+[root@zabbix ~]# systemctl start zabbix-agent
+
+[root@zabbix ~]# systemctl restart zabbix-agent
+
+[root@zabbix ~]# systemctl enable zabbix-agent
+</code></pre></div><p>然后在浏览器中根据下面的美图设置
+<img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a61d1df49?w=1240&amp;h=308&amp;f=png&amp;s=96888" alt="image.png">
+看到第四个了没，ZBX绿了就成功了</p> <p>点左上角的小人就能设置语言是中文
+但是会遇到图标坐标系没有文字的问题如下</p> <p><img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a6cf44eff?w=376&amp;h=212&amp;f=png&amp;s=15317" alt="image.png">
+解决乱码方法：
+把Windows 系统中找到 C:\Windows\Fonts 中的楷体（常规）用winscp （百度一下）拷贝到linux根目录
+<img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a6fc86e4a?w=975&amp;h=300&amp;f=png&amp;s=44909" alt="image.png">
+可以上传到 linux 里面了，接下来把 SIMKAI.TTF 移动到 zabbix 安装目录的 fonts 目录下</p> <div class="language- extra-class"><pre class="language-text"><code>[root@zabbix ~]# mv SIMKAI.TTF /usr/share/zabbix/fonts/
+</code></pre></div><p>可以直接按照下面的图片设置，然后再看看，是不是搞定了
+<img src="https://user-gold-cdn.xitu.io/2018/12/21/167cf28a7b02865b?w=610&amp;h=263&amp;f=png&amp;s=6823" alt="image.png"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/2019/webpack下build报错.html" class="prev">webpack下build报错</a></span> <span class="next"><a href="/杂耍/menu.html">/杂耍/menu.html</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6ea698b8.js" defer></script><script src="/assets/js/2.b4182e24.js" defer></script><script src="/assets/js/21.c1220b6f.js" defer></script>
+  </body>
+</html>

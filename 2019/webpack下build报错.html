@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack下build报错 | Harry&#39;s Blog</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.c7d45e2d.css" as="style"><link rel="preload" href="/assets/js/app.6ea698b8.js" as="script"><link rel="preload" href="/assets/js/2.b4182e24.js" as="script"><link rel="preload" href="/assets/js/20.5bfc367a.js" as="script"><link rel="prefetch" href="/assets/js/10.ec7a14d1.js"><link rel="prefetch" href="/assets/js/11.68fd43cd.js"><link rel="prefetch" href="/assets/js/12.cb531b98.js"><link rel="prefetch" href="/assets/js/13.2117fb4d.js"><link rel="prefetch" href="/assets/js/14.95f820b4.js"><link rel="prefetch" href="/assets/js/15.ff37cb81.js"><link rel="prefetch" href="/assets/js/16.f94e9052.js"><link rel="prefetch" href="/assets/js/17.ead69c87.js"><link rel="prefetch" href="/assets/js/18.517dd641.js"><link rel="prefetch" href="/assets/js/19.17d14f38.js"><link rel="prefetch" href="/assets/js/21.c1220b6f.js"><link rel="prefetch" href="/assets/js/22.d47ea806.js"><link rel="prefetch" href="/assets/js/23.68f3d4b0.js"><link rel="prefetch" href="/assets/js/24.e95df7f3.js"><link rel="prefetch" href="/assets/js/25.d985f29f.js"><link rel="prefetch" href="/assets/js/26.c08cf248.js"><link rel="prefetch" href="/assets/js/27.d84cca50.js"><link rel="prefetch" href="/assets/js/28.bb4c1ed9.js"><link rel="prefetch" href="/assets/js/29.2003a480.js"><link rel="prefetch" href="/assets/js/3.3466fb63.js"><link rel="prefetch" href="/assets/js/30.0e921be7.js"><link rel="prefetch" href="/assets/js/31.bb5d9ed1.js"><link rel="prefetch" href="/assets/js/32.867850a9.js"><link rel="prefetch" href="/assets/js/33.0cf47229.js"><link rel="prefetch" href="/assets/js/34.554d5707.js"><link rel="prefetch" href="/assets/js/35.440ad71c.js"><link rel="prefetch" href="/assets/js/36.4a230733.js"><link rel="prefetch" href="/assets/js/37.f0e8ba0b.js"><link rel="prefetch" href="/assets/js/38.15fa98bf.js"><link rel="prefetch" href="/assets/js/39.19f12e6b.js"><link rel="prefetch" href="/assets/js/4.2d108d05.js"><link rel="prefetch" href="/assets/js/40.3e2ab2b8.js"><link rel="prefetch" href="/assets/js/41.11d9c3d2.js"><link rel="prefetch" href="/assets/js/42.f09a5ebc.js"><link rel="prefetch" href="/assets/js/43.a03a6a5c.js"><link rel="prefetch" href="/assets/js/44.d8ec3f22.js"><link rel="prefetch" href="/assets/js/45.3e91c27e.js"><link rel="prefetch" href="/assets/js/46.086344c8.js"><link rel="prefetch" href="/assets/js/47.b7b2f12a.js"><link rel="prefetch" href="/assets/js/48.a8cefb12.js"><link rel="prefetch" href="/assets/js/49.6af65655.js"><link rel="prefetch" href="/assets/js/5.c199e918.js"><link rel="prefetch" href="/assets/js/50.822624e5.js"><link rel="prefetch" href="/assets/js/51.d7e5822d.js"><link rel="prefetch" href="/assets/js/52.f9a0e91a.js"><link rel="prefetch" href="/assets/js/53.ae07c391.js"><link rel="prefetch" href="/assets/js/54.238a29b4.js"><link rel="prefetch" href="/assets/js/6.85c03d0d.js"><link rel="prefetch" href="/assets/js/7.62c90daa.js"><link rel="prefetch" href="/assets/js/8.d4044af7.js"><link rel="prefetch" href="/assets/js/9.3beb6d47.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c7d45e2d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Harry's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2020年博客</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js忍者秘籍读书笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python基础学习</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>过去的博客</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/2019/10个前端面试必会题.html" class="sidebar-link">10个前端面试必会题目！（适用于中高级）</a></li><li><a href="/2019/201901面试题分享.html" class="sidebar-link">201901面试题分享</a></li><li><a href="/2019/常用的一些git命令行.html" class="sidebar-link">常用的一些git命令行</a></li><li><a href="/2019/发布流程.html" class="sidebar-link">发布流程</a></li><li><a href="/2019/函数节流与防抖.html" class="sidebar-link">函数节流与防抖</a></li><li><a href="/2019/函数柯里化.html" class="sidebar-link">函数柯里化（curry)</a></li><li><a href="/2019/函数声明VS函数表达式.html" class="sidebar-link">函数声明？函数表达式？我该怎么选？！</a></li><li><a href="/2019/看懂js中this关键字的指向问题.html" class="sidebar-link">看懂js中this关键字的指向问题</a></li><li><a href="/2019/浏览器缓存的了解.html" class="sidebar-link">浏览器缓存的了解</a></li><li><a href="/2019/前端进阶学习路径.html" class="sidebar-link">前端进阶学习路径</a></li><li><a href="/2019/前端知识点190111.html" class="sidebar-link">前端知识点1901</a></li><li><a href="/2019/强制缓存（200）和协商缓存（304）.html" class="sidebar-link">强制缓存（200）和协商缓存（304）</a></li><li><a href="/2019/如何理解es6中的class以及class中的constructor函数.html" class="sidebar-link">如何理解es6中的class以及class中的constructor函数</a></li><li><a href="/2019/如何让小孩学习javascript.html" class="sidebar-link">如何让小孩学习javascript</a></li><li><a href="/2019/十分钟了解ajax.html" class="sidebar-link">十分钟了解ajax</a></li><li><a href="/2019/是时候谈谈JavaScript面向对象了.html" class="sidebar-link">是时候谈谈JavaScript面向对象了</a></li><li><a href="/2019/手把手教你实现脚手架工具Koa-generator.html" class="sidebar-link">手把手教你实现脚手架工具Koa-generator</a></li><li><a href="/2019/HTTP请求的四种方式区别.html" class="sidebar-link">HTTP请求的四种方式区别</a></li><li><a href="/2019/javascript-闭包.html" class="sidebar-link">javascript-闭包</a></li><li><a href="/2019/Javascript常见的内存泄漏.html" class="sidebar-link">Javascript常见的内存泄漏</a></li><li><a href="/2019/javascript跨域.html" class="sidebar-link">javascript跨域</a></li><li><a href="/2019/JavaScript执行环境-执行栈.html" class="sidebar-link">JavaScript执行环境-执行栈</a></li><li><a href="/2019/MySQL8-0-12-secure-file-priv数据导出问题解决.html" class="sidebar-link">MySQL8.0.12--secure-file-priv数据导出问题解决</a></li><li><a href="/2019/React_V16入门手册.html" class="sidebar-link">React_V16入门手册</a></li><li><a href="/2019/react16配置.html" class="sidebar-link">/2019/react16配置.html</a></li><li><a href="/2019/react生命周期.html" class="sidebar-link">react生命周期</a></li><li><a href="/2019/React虚拟dom和diff算法.html" class="sidebar-link">React虚拟dom和diff算法</a></li><li><a href="/2019/React学习笔记.html" class="sidebar-link">React学习笔记</a></li><li><a href="/2019/Vue使用踩坑记录.html" class="sidebar-link">Vue使用踩坑记录</a></li><li><a href="/2019/vue中AsyncAwait的使用示例.html" class="sidebar-link">vue中AsyncAwait的使用示例</a></li><li><a href="/2019/webpack下build报错.html" class="active sidebar-link">webpack下build报错</a></li><li><a href="/2019/zabbix平台搭建.html" class="sidebar-link">zabbix平台搭建</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>others</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>执行npm run build时报错如下：</p> <div class="language- extra-class"><pre class="language-text"><code>D:\MyProjects\react_ssr_demo&gt;npm run build
+
+&gt; react_ssr_demo@1.0.0 build D:\MyProjects\react_ssr_demo
+&gt; webpack --config build/webpack.config.js
+
+Hash: 0b1003a436390263970e
+Version: webpack 4.29.3
+Time: 633ms
+Built at: 2019-02-09 15:46:04
+ 1 asset
+Entrypoint app = app.0b1003a436390263970e.js
+[2] ./client/App.jsx 3 KiB {0} [not cacheable] [built] [failed] [1 error]
+[3] ./client/app.js 100 bytes {0} [built]
+[9] (webpack)/buildin/global.js 472 bytes {0} [built]
+    + 7 hidden modules
+
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for th
+is value. Set 'mode' option to 'development' or 'production' to enable defaults
+for each environment.
+You can also set it to 'none' to disable any default behavior. Learn more: https
+://webpack.js.org/concepts/mode/
+
+ERROR in ./client/App.jsx
+Module build failed (from ./node_modules/_babel-loader@8.0.5@babel-loader/lib/in
+dex.js):
+Error: Cannot find module '@babel/core'
+ babel-loader@8 requires Babel 7.x (the package '@babel/core'). If you'd like to
+ use Babel 6.x ('babel-core'), you should install 'babel-loader@7'.
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:581:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:507:25)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (D:\MyProjects\react_ssr_demo\node_modules\_v8-compile-cache@2.0.
+2@v8-compile-cache\v8-compile-cache.js:159:20)
+    at Object.&lt;anonymous&gt; (D:\MyProjects\react_ssr_demo\node_modules\_babel-load
+er@8.0.5@babel-loader\lib\index.js:10:11)
+    at Module._compile (D:\MyProjects\react_ssr_demo\node_modules\_v8-compile-ca
+che@2.0.2@v8-compile-cache\v8-compile-cache.js:178:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
+    at Module.load (internal/modules/cjs/loader.js:599:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:530:3)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (D:\MyProjects\react_ssr_demo\node_modules\_v8-compile-cache@2.0.
+2@v8-compile-cache\v8-compile-cache.js:159:20)
+    at loadLoader (D:\MyProjects\react_ssr_demo\node_modules\_loader-runner@2.4.
+0@loader-runner\lib\loadLoader.js:18:17)
+    at iteratePitchingLoaders (D:\MyProjects\react_ssr_demo\node_modules\_loader
+-runner@2.4.0@loader-runner\lib\LoaderRunner.js:169:2)
+    at runLoaders (D:\MyProjects\react_ssr_demo\node_modules\_loader-runner@2.4.
+0@loader-runner\lib\LoaderRunner.js:365:2)
+    at NormalModule.doBuild (D:\MyProjects\react_ssr_demo\node_modules\_webpack@
+4.29.3@webpack\lib\NormalModule.js:280:3)
+    at NormalModule.build (D:\MyProjects\react_ssr_demo\node_modules\_webpack@4.
+29.3@webpack\lib\NormalModule.js:427:15)
+    at Compilation.buildModule (D:\MyProjects\react_ssr_demo\node_modules\_webpa
+ck@4.29.3@webpack\lib\Compilation.js:635:10)
+    at factory.create (D:\MyProjects\react_ssr_demo\node_modules\_webpack@4.29.3
+@webpack\lib\Compilation.js:884:14)
+    at factory (D:\MyProjects\react_ssr_demo\node_modules\_webpack@4.29.3@webpac
+k\lib\NormalModuleFactory.js:405:6)
+    at hooks.afterResolve.callAsync (D:\MyProjects\react_ssr_demo\node_modules\_
+webpack@4.29.3@webpack\lib\NormalModuleFactory.js:155:13)
+    at AsyncSeriesWaterfallHook.eval [as callAsync] (eval at create (D:\MyProjec
+ts\react_ssr_demo\node_modules\_tapable@1.1.1@tapable\lib\HookCodeFactory.js:32:
+10), &lt;anonymous&gt;:6:1)
+    at resolver (D:\MyProjects\react_ssr_demo\node_modules\_webpack@4.29.3@webpa
+ck\lib\NormalModuleFactory.js:138:29)
+    at process.nextTick (D:\MyProjects\react_ssr_demo\node_modules\_webpack@4.29
+.3@webpack\lib\NormalModuleFactory.js:342:9)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+ @ ./client/app.js 2:0-27 4:16-19
+npm ERR! code ELIFECYCLE
+npm ERR! errno 2
+npm ERR! react_ssr_demo@1.0.0 build: `webpack --config build/webpack.config.js`
+npm ERR! Exit status 2
+npm ERR!
+npm ERR! Failed at the react_ssr_demo@1.0.0 build script.
+npm ERR! This is probably not a problem with npm. There is likely additional log
+ging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\Administrator.PC-201812050004\AppData\Roaming\npm-cache\_l
+ogs\2019-02-09T07_46_04_537Z-debug.log
+</code></pre></div><p>这里面有两个问题</p> <ol><li>WARNING in configuration</li></ol> <blockquote><p>解决方法：在webpack.config.js下增加mode: 'none'
+module.exports = {
+mode: 'none',</p></blockquote> <ol start="2"><li>Error: Cannot find module '@babel/core'
+babel-loader@8 requires Babel 7.x (the package '@babel/core'). If you'd like to
+use Babel 6.x ('babel-core'), you should install 'babel-loader@7'.</li></ol> <blockquote><p>解决方法：npm i babel-loader@7 -D</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/2019/vue中AsyncAwait的使用示例.html" class="prev">vue中AsyncAwait的使用示例</a></span> <span class="next"><a href="/2019/zabbix平台搭建.html">zabbix平台搭建</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6ea698b8.js" defer></script><script src="/assets/js/2.b4182e24.js" defer></script><script src="/assets/js/20.5bfc367a.js" defer></script>
+  </body>
+</html>
